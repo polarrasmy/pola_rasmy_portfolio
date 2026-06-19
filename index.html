@@ -957,7 +957,7 @@ body.menu-open .n-toggle span:nth-child(3) { transform:translateY(-10px) rotate(
 .city-role { font-family:'Inter',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(238,235,228,.55);line-height:1.5; }
 .dc-subcopy { font-family:'Inter',sans-serif;font-size:.78rem;line-height:1.55;color:rgba(238,235,228,.58);max-width:340px;margin-bottom:1.1rem; }
 .dc-form { display:flex;flex-direction:column;gap:.5rem;width:min(340px,100%); }
-.dc-form input,.dc-form textarea { font-family:'Inter',sans-serif;font-size:.82rem;color:var(--cream);background:rgba(8,8,9,.5);border:1px solid rgba(200,160,80,.2);border-radius:0;padding:.7rem .85rem;width:100%;transition:border-color .25s,background .25s;resize:none; }
+.dc-form input,.dc-form textarea { font-family:'Inter',sans-serif;font-size:16px;color:var(--cream);background:rgba(8,8,9,.5);border:1px solid rgba(200,160,80,.2);border-radius:0;padding:.7rem .85rem;width:100%;transition:border-color .25s,background .25s;resize:none; }
 .dc-form input::placeholder,.dc-form textarea::placeholder { color:rgba(238,235,228,.4); }
 .dc-form input:focus,.dc-form textarea:focus { outline:none;border-color:rgba(200,160,80,.55);background:rgba(14,13,12,.7); }
 .dc-submit { display:inline-flex;align-items:center;justify-content:space-between;gap:.9rem;width:100%;min-height:46px;margin-top:.25rem;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);background:rgba(200,160,80,.1);border:1px solid rgba(200,160,80,.4);padding:.55rem .55rem .55rem 1rem;transition:background .25s,border-color .25s; }
@@ -965,10 +965,18 @@ body.menu-open .n-toggle span:nth-child(3) { transform:translateY(-10px) rotate(
 .dc-submit .dc-arrow { flex:0 0 32px;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(200,160,80,.4);color:var(--gold); }
 .dc-submit .dc-arrow svg { width:14px;height:14px; }
 /* Footer social icons */
-.ft-links { gap:clamp(1.2rem,2.6vw,1.9rem); }
-.ft-links a { display:inline-flex;align-items:center; }
+.ft-links { gap:clamp(.2rem,1.2vw,1rem); }
+.ft-links a { display:inline-flex;align-items:center;justify-content:center;padding:10px; }
 .ft-links a svg { width:18px;height:18px;display:block; }
-@media (max-width:760px){ .ft-links { gap:1.5rem; } }
+/* deliberate order: work platforms first, then social reach */
+.ft-links a:nth-child(1){order:1} /* Instagram */
+.ft-links a:nth-child(2){order:5} /* X */
+.ft-links a:nth-child(3){order:2} /* YouTube */
+.ft-links a:nth-child(4){order:3} /* Behance */
+.ft-links a:nth-child(5){order:4} /* IMDb */
+.ft-links a:nth-child(6){order:6} /* Facebook */
+.ft-links a:nth-child(7){order:7} /* TikTok */
+@media (max-width:760px){ .ft-links { gap:.15rem; } }
 /* Disciplines column: distribute the 6 rows to fill the height the contact form created (no empty void) */
 @media (min-width:981px){
   .disc-connect .dc-panel:first-child { display:flex;flex-direction:column; }
