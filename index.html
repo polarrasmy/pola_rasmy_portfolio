@@ -34,6 +34,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="dns-prefetch" href="https://player.vimeo.com">
+<link rel="preload" as="image" href="section1-image.jpg" fetchpriority="high">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -602,7 +603,7 @@ section { padding:clamp(5rem,10vw,9rem) var(--pad);border-bottom:1px solid var(-
 }
 
 @media (max-width: 560px) {
-  .about-stats { grid-template-columns:1fr; }
+  .about-stats { grid-template-columns:repeat(2,1fr); }
 }
 
 /* ════════ GLOBAL PRESENCE ════════ */
@@ -923,6 +924,7 @@ body.menu-open .n-toggle span:nth-child(3) { transform:translateY(-10px) rotate(
 /* ════════ TOUCH DEVICES (no custom cursor) ════════ */
 @media (hover: none), (pointer: coarse) {
   #cur, #cur2 { display:none !important; }
+  body::before { display:none; } /* kill the heavy film-grain filter on mobile = less jank */
   body, .work-nav, .city { cursor:auto; }
   a, button, .wc, .svc, .c-link, .dc-item, .dc-card, .dc-link,
   .credit-right, .about-photo, .hero-play, .work-nav, .city { cursor:pointer; }
@@ -1311,9 +1313,12 @@ body.menu-open .n-toggle span:nth-child(3) { transform:translateY(-10px) rotate(
 
 <script>
 const cur=document.getElementById('cur'),cur2=document.getElementById('cur2');
-let mx=0,my=0,tx=0,ty=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
-(function a(){tx+=(mx-tx)*.13;ty+=(my-ty)*.13;cur2.style.left=tx+'px';cur2.style.top=ty+'px';requestAnimationFrame(a);})();
+const isTouch=window.matchMedia('(hover: none), (pointer: coarse)').matches;
+if(!isTouch){
+  let mx=0,my=0,tx=0,ty=0;
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
+  (function a(){tx+=(mx-tx)*.13;ty+=(my-ty)*.13;cur2.style.left=tx+'px';cur2.style.top=ty+'px';requestAnimationFrame(a);})();
+}
 document.querySelectorAll('a,button,.wc,.svc,.city,.c-link,.dc-item,.dc-card,.dc-link,.credit-right,.about-photo,.hero-play,.work-nav').forEach(el=>{el.addEventListener('mouseenter',()=>document.body.classList.add('h'));el.addEventListener('mouseleave',()=>document.body.classList.remove('h'));});
 
 let n=0;const li=setInterval(()=>{n=Math.min(n+Math.random()*14,100);if(n>=100){clearInterval(li);setTimeout(()=>{const ldr=document.getElementById('ldr');if(ldr)ldr.classList.add('out');},200);}},65);
