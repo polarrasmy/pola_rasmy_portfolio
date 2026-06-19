@@ -969,6 +969,12 @@ body.menu-open .n-toggle span:nth-child(3) { transform:translateY(-10px) rotate(
 .ft-links a { display:inline-flex;align-items:center; }
 .ft-links a svg { width:18px;height:18px;display:block; }
 @media (max-width:760px){ .ft-links { gap:1.5rem; } }
+/* Disciplines column: distribute the 6 rows to fill the height the contact form created (no empty void) */
+@media (min-width:981px){
+  .disc-connect .dc-panel:first-child { display:flex;flex-direction:column; }
+  .disc-connect .dc-panel:first-child .dc-list { flex:1;display:flex;flex-direction:column;justify-content:space-between; }
+  .disc-connect .dc-panel:first-child .dc-item { flex:1;border-bottom:1px solid rgba(255,255,255,.06); }
+}
 </style>
 <script type="application/ld+json">
 {
