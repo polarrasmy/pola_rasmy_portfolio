@@ -330,7 +330,7 @@ nav::before { content:'';position:absolute;inset:0;background:linear-gradient(to
   font-weight:600; }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 720px) {
   /* Stack hero children vertically so they never overlap */
   .hero {
     height:auto;min-height:100svh;
@@ -884,7 +884,7 @@ footer {
 /* ════════ MOBILE NAV TOGGLE ════════ */
 .n-toggle {
   display:none;position:absolute;right:var(--pad);z-index:2;
-  width:30px;height:22px;background:none;border:0;padding:0;
+  width:44px;height:44px;background:none;border:0;padding:11px 7px;
   flex-direction:column;justify-content:space-between;cursor:pointer;
 }
 .n-toggle span {
@@ -966,7 +966,7 @@ body.menu-open .n-toggle span:nth-child(3) { transform:translateY(-10px) rotate(
 .dc-submit .dc-arrow svg { width:14px;height:14px; }
 /* Footer social icons */
 .ft-links { gap:clamp(.2rem,1.2vw,1rem); }
-.ft-links a { display:inline-flex;align-items:center;justify-content:center;padding:10px; }
+.ft-links a { display:inline-flex;align-items:center;justify-content:center;padding:13px; }
 .ft-links a svg { width:18px;height:18px;display:block; }
 /* deliberate order: work platforms first, then social reach */
 .ft-links a:nth-child(1){order:1} /* Instagram */
@@ -976,7 +976,8 @@ body.menu-open .n-toggle span:nth-child(3) { transform:translateY(-10px) rotate(
 .ft-links a:nth-child(5){order:4} /* IMDb */
 .ft-links a:nth-child(6){order:6} /* Facebook */
 .ft-links a:nth-child(7){order:7} /* TikTok */
-@media (max-width:760px){ .ft-links { gap:.15rem; } }
+@media (max-width:760px){ .ft-links { gap:clamp(.4rem,3vw,1rem); } }
+@media (max-width:360px){ .ft-links { flex-wrap:wrap;justify-content:center;row-gap:.5rem; } }
 /* Disciplines column: distribute the 6 rows to fill the height the contact form created (no empty void) */
 @media (min-width:981px){
   .disc-connect .dc-panel:first-child { display:flex;flex-direction:column; }
