@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>RASMY — Cinematic Car & Product Films</title>
+<meta name="description" content="The final image — directed and graded. Fixed-scope cinematic car & product films and signature color, delivered fast. By a director & colorist with Apple TV+ and Ezz Elarab (Ferrari, among others) credits." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#0E0E0F;--ink-2:#15151A;--ink-3:#1D1D24;
+    --copper:#C97D2E;--copper-lt:#E0A05A;--cream:#F4EDE2;--muted:#9A958C;
+    --line:rgba(244,237,226,.12);--maxw:1140px;
+    --display:"Fraunces",Georgia,serif;--body:"Inter",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--ink);color:var(--cream);font-family:var(--body);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  a{color:inherit;text-decoration:none}
+  .copper{color:var(--copper-lt)}
+  h1,h2,h3,h4{font-family:var(--display);font-weight:500;line-height:1.12;letter-spacing:-.01em}
+  .eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--copper);font-weight:600}
+  nav{position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:blur(14px);background:rgba(14,14,15,.72);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand b{font-family:var(--display);font-size:21px;letter-spacing:.02em;font-weight:600}
+  .brand b span{color:var(--copper)}
+  .btn{display:inline-block;background:var(--copper);color:#160e04;font-weight:600;padding:12px 22px;border-radius:999px;font-size:14.5px;transition:.2s;border:0;cursor:pointer;font-family:var(--body)}
+  .btn:hover{background:var(--copper-lt);transform:translateY(-1px)}
+  .btn-ghost{background:transparent;color:var(--cream);border:1px solid var(--line)}
+  .btn-ghost:hover{border-color:var(--copper)}
+  .nav-cta{display:none}@media(min-width:760px){.nav-cta{display:inline-block}}
+  header.hero{position:relative;padding:150px 0 92px;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;z-index:0;background:
+      radial-gradient(1100px 520px at 78% -8%,rgba(201,125,46,.22),transparent 60%),
+      radial-gradient(800px 480px at 8% 12%,rgba(201,125,46,.08),transparent 55%),
+      linear-gradient(180deg,#0E0E0F 0%,#121214 100%)}
+  .hero .wrap{position:relative;z-index:2;max-width:900px}
+  .hero h1{font-size:clamp(38px,6vw,70px);font-weight:500}
+  .hero h1 .em{font-style:italic;color:var(--copper-lt)}
+  .hero .lede{font-size:clamp(17px,2.1vw,21px);color:#d9d2c6;max-width:660px;margin:26px 0 14px;font-weight:300}
+  .hero .sub{color:var(--muted);font-size:15px;max-width:620px;margin-bottom:34px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .hero-note{color:var(--muted);font-size:13px;margin-top:18px}
+  .credits-strip{margin-top:52px;display:flex;flex-wrap:wrap;gap:10px 26px;align-items:center;border-top:1px solid var(--line);padding-top:24px}
+  .credits-strip span{color:var(--muted);font-size:12.5px;letter-spacing:.06em}
+  .credits-strip b{color:var(--cream);font-weight:500}
+  section{padding:88px 0;position:relative}
+  .sec-head{max-width:680px;margin-bottom:46px}
+  .sec-head h2{font-size:clamp(28px,3.6vw,42px);margin-top:14px}
+  .sec-head p{color:var(--muted);margin-top:16px;font-size:16px}
+  #offer{background:var(--ink-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .tiers{display:grid;gap:18px;grid-template-columns:1fr}
+  @media(min-width:820px){.tiers{grid-template-columns:repeat(3,1fr)}}
+  .tier{background:linear-gradient(160deg,var(--ink-3),var(--ink-2));border:1px solid var(--line);border-radius:18px;padding:30px;position:relative;overflow:hidden;display:flex;flex-direction:column}
+  .tier.hi{border-color:var(--copper)}
+  .tier.hi::before{content:"Most booked";position:absolute;top:16px;right:-34px;transform:rotate(45deg);background:var(--copper);color:#160e04;font-size:11px;font-weight:600;padding:4px 40px;font-family:var(--body)}
+  .tier h3{font-size:23px;margin-bottom:4px}
+  .tier .turn{color:var(--copper-lt);font-size:13px;margin-bottom:16px}
+  .tier .amt{font-family:var(--display);font-size:26px;color:var(--cream);margin-bottom:4px}
+  .tier .amt small{font-size:13px;color:var(--muted);font-family:var(--body)}
+  .tier ul{list-style:none;margin:16px 0 22px;display:grid;gap:11px}
+  .tier li{display:flex;gap:11px;align-items:flex-start;font-size:14.5px;color:#ddd6ca}
+  .tier li::before{content:"";flex:0 0 7px;height:7px;margin-top:7px;border-radius:50%;background:var(--copper);box-shadow:0 0 0 4px rgba(201,125,46,.16)}
+  .tier .btn{margin-top:auto;text-align:center}
+  #process{background:var(--ink-2);border-top:1px solid var(--line)}
+  .steps{display:grid;gap:22px;grid-template-columns:1fr}
+  @media(min-width:760px){.steps{grid-template-columns:repeat(3,1fr)}}
+  .step{border:1px solid var(--line);border-radius:16px;padding:28px;background:var(--ink)}
+  .step .n{font-family:var(--display);font-size:40px;color:var(--copper);opacity:.85;line-height:1}
+  .step h4{font-size:19px;margin:14px 0 8px}
+  .step p{color:var(--muted);font-size:14.5px}
+  .proof-grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+  .proof{border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--ink-2)}
+  .proof b{font-family:var(--display);font-size:17px;display:block;margin-bottom:5px}
+  .proof span{color:var(--muted);font-size:13.5px}
+  #book{background:radial-gradient(700px 400px at 80% 0,rgba(201,125,46,.18),transparent 60%),var(--ink)}
+  .form-shell{display:grid;gap:42px;grid-template-columns:1fr}
+  @media(min-width:880px){.form-shell{grid-template-columns:1.05fr .95fr;align-items:start}}
+  form{background:var(--ink-2);border:1px solid var(--line);border-radius:20px;padding:32px}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-size:13px;color:var(--muted);margin-bottom:7px;letter-spacing:.04em}
+  .field input,.field select,.field textarea{width:100%;background:var(--ink);border:1px solid var(--line);color:var(--cream);border-radius:11px;padding:13px 14px;font-family:var(--body);font-size:15px;transition:.2s}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--copper)}
+  .field textarea{min-height:84px;resize:vertical}
+  form .btn{width:100%;padding:15px;font-size:15.5px;margin-top:6px}
+  .form-note{color:var(--muted);font-size:12.5px;margin-top:14px;text-align:center}
+  .ok{display:none;text-align:center;padding:22px;border:1px solid var(--copper);border-radius:14px;color:var(--copper-lt);margin-top:18px}
+  .book-aside h2{font-size:clamp(26px,3.4vw,38px);margin-bottom:18px}
+  .book-aside p{color:#d9d2c6;font-size:16px;margin-bottom:16px;font-weight:300}
+  .book-aside .line{border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-top:16px;background:var(--ink-2);font-size:14.5px;color:#ddd6ca}
+  footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:13px;text-align:center}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="brand"><b>RASMY<span>.</span></b></div>
+  <a href="#book" class="btn nav-cta">Book a call</a>
+</div></nav>
+
+<header class="hero"><div class="hero-bg"></div><div class="wrap">
+  <div class="eyebrow">Cinematic car &amp; product films</div>
+  <h1>The final image — <span class="em">directed and graded.</span></h1>
+  <p class="lede">A film that makes the car, the product, or the place look the way the brand wishes it always did. Fixed scope. Fixed fee. Delivered fast.</p>
+  <p class="sub">Most production houses hand you footage. I hand you the finished image — the direction and the color that make people stop scrolling.</p>
+  <div class="hero-cta">
+    <a href="#book" class="btn">Start a project</a>
+    <a href="#offer" class="btn btn-ghost">See the packages</a>
+  </div>
+  <p class="hero-note">Egypt-based · shooting &amp; remote color · English &amp; Arabic delivery.</p>
+  <div class="credits-strip">
+    <span>Selected credits</span>
+    <b>Post &amp; final-image direction — Ezz Elarab Automotive Group (Ferrari, among others)</b>
+    <b>Color &amp; finishing — Apple TV+ content</b>
+  </div>
+</div></header>
+
+<section id="why"><div class="wrap">
+  <div class="sec-head">
+    <div class="eyebrow">Why it matters</div>
+    <h2>A great car shot badly looks cheap. The grade is where the money shows.</h2>
+    <p>Cars, watches, interiors, food — the difference between "an ad" and "a brand" lives in the lighting, the cut, and the color. That's the layer I own. You don't need a bigger crew; you need the final image done by someone whose name is already on it.</p>
+  </div>
+</div></section>
+
+<section id="offer"><div class="wrap">
+  <div class="sec-head">
+    <div class="eyebrow">Packages</div>
+    <h2>Pick by what you already have.</h2>
+    <p>Every package is fixed scope and fixed fee — agreed on the call, no surprise invoices.</p>
+  </div>
+  <div class="tiers">
+    <div class="tier">
+      <h3>The Grade</h3>
+      <div class="turn">~3 days · you have footage</div>
+      <div class="amt">from $___<small> / project</small></div>
+      <ul>
+        <li>Signature color &amp; finishing on your existing footage</li>
+        <li>Look development + 1 round of revisions</li>
+        <li>Delivered in your platform specs (broadcast / social)</li>
+      </ul>
+      <a href="#book" class="btn btn-ghost">Send your footage</a>
+    </div>
+    <div class="tier hi">
+      <h3>The Reel</h3>
+      <div class="turn">~5–7 days · one hero film</div>
+      <div class="amt">from $___<small> / project</small></div>
+      <ul>
+        <li>One cinematic hero film (vertical or 16:9), one location</li>
+        <li>Directed, shot, edited &amp; graded by me</li>
+        <li>3 social cutdowns + thumbnail frame</li>
+      </ul>
+      <a href="#book" class="btn">Book the Reel</a>
+    </div>
+    <div class="tier">
+      <h3>The Film</h3>
+      <div class="turn">~2–3 weeks · full commercial</div>
+      <div class="amt">from $___<small> / project</small></div>
+      <ul>
+        <li>Full 60–90s cinematic commercial + platform cutdowns</li>
+        <li>Concept, direction, finishing &amp; signature grade</li>
+        <li>Licensed music + delivery kit for every channel</li>
+      </ul>
+      <a href="#book" class="btn btn-ghost">Plan the Film</a>
+    </div>
+  </div>
+</div></section>
+
+<section id="process"><div class="wrap">
+  <div class="sec-head">
+    <div class="eyebrow">How it works</div>
+    <h2>From call to delivered file.</h2>
+  </div>
+  <div class="steps">
+    <div class="step"><div class="n">1</div><h4>Brief call</h4><p>20 minutes. We lock the look, the deliverables, the date, and the fixed fee.</p></div>
+    <div class="step"><div class="n">2</div><h4>Shoot / ingest</h4><p>I shoot it, or you send your footage. Either way it comes to me to finish.</p></div>
+    <div class="step"><div class="n">3</div><h4>Direct &amp; grade → deliver</h4><p>The final image, in your specs, on the agreed day. One revision round included.</p></div>
+  </div>
+</div></section>
+
+<section id="proof"><div class="wrap">
+  <div class="sec-head"><div class="eyebrow">Proof</div><h2>The work is already on real screens.</h2></div>
+  <div class="proof-grid">
+    <div class="proof"><b>Ezz Elarab Automotive</b><span>Director &amp; colorist — post and final image for Egypt's multi-brand distributor (Ferrari, among others).</span></div>
+    <div class="proof"><b>Apple TV+</b><span>Color &amp; finishing on streamed content.</span></div>
+    <div class="proof"><b>Cinematic car &amp; commercial</b><span>The exact look this page is selling — made in Egypt.</span></div>
+  </div>
+</div></section>
+
+<section id="book"><div class="wrap"><div class="form-shell">
+  <div>
+    <form id="leadForm" onsubmit="return submitLead(event)">
+      <div class="field"><label>Name</label><input id="f_name" required></div>
+      <div class="field"><label>Brand / company</label><input id="f_brand" required></div>
+      <div class="field"><label>WhatsApp or email</label><input id="f_contact" required></div>
+      <div class="field"><label>What package fits?</label>
+        <select id="f_pkg">
+          <option>The Grade — color only</option>
+          <option selected>The Reel — one hero film</option>
+          <option>The Film — full commercial</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+      <div class="field"><label>One line about the project</label><textarea id="f_msg" placeholder="e.g. New SUV launch, need a 30s hero + 3 cutdowns by month-end."></textarea></div>
+      <button class="btn" type="submit">Send &amp; open WhatsApp</button>
+      <p class="form-note">No obligation — this just starts the conversation.</p>
+    </form>
+    <div class="ok" id="okBox">Done ✅ WhatsApp will open with your message ready — hit send and I'll reply with times.</div>
+  </div>
+  <div class="book-aside">
+    <h2>Let's make the image, not the excuse.</h2>
+    <p>Tell me what you're launching and what you already have. You'll get a fixed scope and a fixed fee on the call — and a delivery date you can plan around.</p>
+    <div class="line">Fastest path: if you already shot it, take <b class="copper">The Grade</b>. I can turn a finished color around in about three days.</div>
+  </div>
+</div></div></section>
+
+<footer><div class="wrap">RASMY — Cinematic car &amp; product films · Pola Rasmy, director &amp; colorist · Egypt · hello@rasmy.studio</div></footer>
+
+<script>
+  /* ⚙️ CONFIG — Pola: fill these, set the 3 "from $___" prices in the HTML, then publish. */
+  const RASMY = {
+    whatsapp : "8619859039183",   // China WhatsApp (+86 198 5903 9183)
+    formspree: "",   // optional: "https://formspree.io/f/xxxxxxx"
+    calendly : ""    // optional: Calendly link
+  };
+  function submitLead(e){
+    e.preventDefault();
+    const name=(document.getElementById('f_name').value||'').trim();
+    const brand=(document.getElementById('f_brand').value||'').trim();
+    const contact=(document.getElementById('f_contact').value||'').trim();
+    const pkg=document.getElementById('f_pkg').value;
+    const note=(document.getElementById('f_msg').value||'').trim();
+    const msg=`Hi Pola — ${name} from ${brand}. Interested in: ${pkg}. ${note} (Reach me: ${contact})`;
+    if(RASMY.formspree){
+      try{fetch(RASMY.formspree,{method:'POST',headers:{'Accept':'application/json'},
+        body:new URLSearchParams({name,brand,contact,package:pkg,note})});}catch(_){}
+    }
+    if(RASMY.whatsapp){
+      window.open(`https://wa.me/${RASMY.whatsapp}?text=${encodeURIComponent(msg)}`,'_blank');
+      document.getElementById('okBox').style.display='block';
+    } else {
+      alert('⚙️ Pola: set your WhatsApp number in CONFIG so the form works.');
+    }
+    return false;
+  }
+  if(RASMY.calendly){document.querySelectorAll('a.btn[href="#book"]').forEach(a=>a.href=RASMY.calendly);}
+</script>
+</body>
+</html>
