@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="RASMY — cinematic AI ad & product films, graded by the colorist behind Ferrari (Ezz Elarab) and Apple TV+ content. Delivered in days." />
+<title>RASMY — Cinematic AI Ad Films</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{--bg:#0a0908;--card:#141210;--ink:#f2efe9;--copper:#c97d2e;--copper-l:#e0a766;--muted:#9a948a;--line:rgba(255,255,255,.12);--sans:'Inter',sans-serif;--serif:'Fraunces',Georgia,serif;--ease:cubic-bezier(.22,.61,.36,1)}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.7}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 32px}
+  nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .logo{font-family:var(--serif);font-weight:600;font-size:24px;letter-spacing:.04em}.logo span{color:var(--copper)}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;padding:14px 26px;border-radius:3px;cursor:pointer;border:1px solid transparent;background:var(--copper);color:#1a1004;letter-spacing:.03em;transition:.25s}
+  .btn:hover{background:var(--copper-l);transform:translateY(-2px)}
+  .btn-line{background:transparent;border-color:var(--line);color:var(--ink)}.btn-line:hover{border-color:var(--copper);color:var(--copper-l)}
+  .hero{padding:70px 0 60px;border-bottom:1px solid var(--line)}
+  .eyebrow{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--copper-l);font-weight:600}
+  h1{font-family:var(--serif);font-weight:500;font-size:clamp(40px,6.5vw,76px);line-height:1.0;letter-spacing:-.02em;margin:20px 0 18px}
+  h1 em{font-style:italic;color:var(--copper-l)}
+  .sub{font-size:19px;color:#cbc6bb;font-weight:300;max-width:30em}
+  .credits{margin:26px 0;font-size:14px;color:var(--muted)}
+  .credits b{color:var(--ink);font-weight:500}
+  .cta{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+  section{padding:60px 0;border-bottom:1px solid var(--line)}
+  .lab{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--copper-l);font-weight:600}
+  h2{font-family:var(--serif);font-weight:500;font-size:clamp(26px,3.4vw,38px);margin:12px 0 20px;letter-spacing:-.01em}
+  .get{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
+  .g{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:26px 22px}
+  .g .n{font-family:var(--serif);color:var(--copper);font-size:14px}
+  .g h3{font-size:16px;font-weight:600;margin:10px 0 8px}
+  .g p{font-size:14px;color:var(--muted);font-weight:300}
+  .reel{aspect-ratio:16/9;border-radius:12px;border:1px solid var(--line);background:radial-gradient(120% 120% at 40% 30%,#2a241c,#0b0a08);display:flex;align-items:center;justify-content:center;margin-top:10px;position:relative}
+  .reel .pl{width:64px;height:64px;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center}
+  .reel .cap{position:absolute;bottom:16px;font-size:12px;color:var(--muted);letter-spacing:.06em}
+  .price{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:20px}
+  .pc{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:28px}
+  .pc.feat{border-color:var(--copper)}
+  .pc h3{font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:var(--copper-l);margin-bottom:8px}
+  .pc .amt{font-family:var(--serif);font-size:34px;color:#fff}.pc .amt small{font-size:15px;color:var(--muted)}
+  .pc p{font-size:14px;color:var(--muted);font-weight:300;margin-top:10px}
+  .final{text-align:center;padding:64px 0}
+  .final h2{max-width:18em;margin:0 auto 12px}
+  .final p{color:var(--muted);font-weight:300;margin-bottom:26px}
+  .f{display:flex;gap:10px;max-width:440px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+  .f input{flex:1;min-width:210px;background:var(--card);border:1px solid var(--line);color:#fff;padding:14px 16px;border-radius:3px;font-size:15px;font-family:var(--sans)}
+  .f input:focus{outline:none;border-color:var(--copper)}
+  .ok{display:none;margin-top:18px;color:var(--copper-l);font-family:var(--serif);font-style:italic;font-size:17px}
+  footer{padding:34px 0;color:var(--muted);font-size:13px;text-align:center}
+  @media(max-width:760px){.get,.price{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a href="#" class="logo">RASMY<span>.</span></a>
+      <a href="#book" class="btn">Book a call</a>
+    </nav>
+
+    <header class="hero">
+      <span class="eyebrow">Cinematic ad films · made with AI</span>
+      <h1 class="serif">Ads that look like<br><em>cinema.</em><br>Delivered in days.</h1>
+      <p class="sub">Premium product &amp; brand films for companies that are tired of flat, forgettable content — at a fraction of a production house, in a fraction of the time.</p>
+      <div class="credits">Color &amp; final image for <b>Ezz Elarab</b> (Ferrari · Egypt's multi-brand distributor) · post on <b>Apple TV+</b> content · directed &amp; graded by Pola Rasmy.</div>
+      <div class="cta">
+        <a href="#book" class="btn">Book a 15-min call</a>
+        <a href="#work" class="btn btn-line">See the work ▸</a>
+      </div>
+    </header>
+
+    <section id="work">
+      <span class="lab">What you get</span>
+      <h2 class="serif">The full image — not just footage.</h2>
+      <div class="get">
+        <div class="g"><div class="n">01</div><h3>Cinematic AI ad films</h3><p>Scroll-stopping product &amp; brand films, generated and directed with a filmmaker's eye — not a template.</p></div>
+        <div class="g"><div class="n">02</div><h3>Pro color &amp; finish</h3><p>The same grade behind premium automotive and streaming content. The "final image" most brands never get.</p></div>
+        <div class="g"><div class="n">03</div><h3>Built for every platform</h3><p>Cut for TikTok, Reels, YouTube and the hero spot — ready to post, ready to run as ads.</p></div>
+      </div>
+      <div class="reel">
+        <span class="pl"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" style="margin-left:3px"><path d="M6 4v16l13-8Z"/></svg></span>
+        <span class="cap">Showreel — Ferrari · automotive · commercial · AI</span>
+      </div>
+    </section>
+
+    <section>
+      <span class="lab">Simple, premium pricing</span>
+      <h2 class="serif">Two ways to work.</h2>
+      <div class="price">
+        <div class="pc"><h3>Single film</h3><div class="amt">from $350<small> / film</small></div><p>One cinematic ad film, fully graded, in platform cuts. Perfect first project to see the difference.</p></div>
+        <div class="pc feat"><h3>Monthly retainer</h3><div class="amt">from $2,500<small> / mo</small></div><p>A steady stream of cinematic ad content every month — for brands that need to keep feeding the algorithm with quality.</p></div>
+      </div>
+    </section>
+
+    <section class="final" id="book">
+      <span class="lab">Let's make something worth watching</span>
+      <h2 class="serif">Tell me about your brand. I'll send you a free sample idea.</h2>
+      <p>15-minute call, no pressure. Or drop your email and I'll reach out.</p>
+      <form class="f" onsubmit="return s(event)">
+        <input type="email" id="e" placeholder="Your work email" required />
+        <button class="btn" type="submit">Send</button>
+      </form>
+      <div class="ok" id="ok">Got it — I'll reach out within 24 hours. ✦</div>
+    </section>
+  </div>
+  <footer><div class="wrap">RASMY · Cinematic AI ad films · Cairo → worldwide · © 2026</div></footer>
+  <script>function s(e){e.preventDefault();document.querySelector('.f').style.display='none';document.getElementById('ok').style.display='block';return false}</script>
+</body>
+</html>
