@@ -16,6 +16,7 @@
   .logo{font-family:var(--serif);font-weight:600;font-size:24px;letter-spacing:.04em}.logo span{color:var(--copper)}
   .btn{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;padding:14px 26px;border-radius:3px;cursor:pointer;border:1px solid transparent;background:var(--copper);color:#1a1004;letter-spacing:.03em;transition:.25s}
   .btn:hover{background:var(--copper-l);transform:translateY(-2px)}
+  .btn:focus-visible,a:focus-visible{outline:3px solid var(--copper-l);outline-offset:4px}
   .btn-line{background:transparent;border-color:var(--line);color:var(--ink)}.btn-line:hover{border-color:var(--copper);color:var(--copper-l)}
   .hero{padding:70px 0 60px;border-bottom:1px solid var(--line)}
   .eyebrow{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--copper-l);font-weight:600}
@@ -46,9 +47,6 @@
   .final h2{max-width:18em;margin:0 auto 12px}
   .final p{color:var(--muted);font-weight:300;margin-bottom:26px}
   .f{display:flex;gap:10px;max-width:440px;margin:0 auto;flex-wrap:wrap;justify-content:center}
-  .f input{flex:1;min-width:210px;background:var(--card);border:1px solid var(--line);color:#fff;padding:14px 16px;border-radius:3px;font-size:15px;font-family:var(--sans)}
-  .f input:focus{outline:none;border-color:var(--copper)}
-  .ok{display:none;margin-top:18px;color:var(--copper-l);font-family:var(--serif);font-style:italic;font-size:17px}
   footer{padding:34px 0;color:var(--muted);font-size:13px;text-align:center}
   @media(max-width:760px){.get,.price{grid-template-columns:1fr}}
 </style>
@@ -57,7 +55,7 @@
   <div class="wrap">
     <nav>
       <a href="#" class="logo">RASMY<span>.</span></a>
-      <a href="#book" class="btn">Book a call</a>
+      <a href="https://calendly.com/polarasmy/30min?utm_source=rasmy-studio&amp;utm_medium=landing&amp;utm_campaign=book_a_call" class="btn">Book a call</a>
     </nav>
 
     <header class="hero">
@@ -66,7 +64,7 @@
       <p class="sub">Premium product &amp; brand films for companies that are tired of flat, forgettable content — at a fraction of a production house, in a fraction of the time.</p>
       <div class="credits">Color &amp; final image for <b>Ezz Elarab</b> (Ferrari · Egypt's multi-brand distributor) · post on <b>Apple TV+</b> content · directed &amp; graded by Pola Rasmy.</div>
       <div class="cta">
-        <a href="#book" class="btn">Book a 15-min call</a>
+        <a href="https://calendly.com/polarasmy/30min?utm_source=rasmy-studio&amp;utm_medium=landing&amp;utm_campaign=book_a_call" class="btn">Book a 15-min call</a>
         <a href="#work" class="btn btn-line">See the work ▸</a>
       </div>
     </header>
@@ -97,15 +95,13 @@
     <section class="final" id="book">
       <span class="lab">Let's make something worth watching</span>
       <h2 class="serif">Tell me about your brand. I'll send you a free sample idea.</h2>
-      <p>15-minute call, no pressure. Or drop your email and I'll reach out.</p>
-      <form class="f" onsubmit="return s(event)">
-        <input type="email" id="e" placeholder="Your work email" required />
-        <button class="btn" type="submit">Send</button>
-      </form>
-      <div class="ok" id="ok">Got it — I'll reach out within 24 hours. ✦</div>
+      <p>15-minute call, no pressure. Or email me directly.</p>
+      <div class="f">
+        <a href="https://calendly.com/polarasmy/30min?utm_source=rasmy-studio&amp;utm_medium=landing&amp;utm_campaign=book_a_call" class="btn">Book a 15-min call</a>
+        <a href="mailto:polaraafat@icloud.com" class="btn btn-line">Email me</a>
+      </div>
     </section>
   </div>
   <footer><div class="wrap">RASMY · Cinematic AI ad films · Cairo → worldwide · © 2026</div></footer>
-  <script>function s(e){e.preventDefault();document.querySelector('.f').style.display='none';document.getElementById('ok').style.display='block';return false}</script>
 </body>
 </html>
