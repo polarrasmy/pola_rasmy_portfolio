@@ -101,7 +101,7 @@ nav::before { content:'';position:absolute;inset:0;background:linear-gradient(to
 @keyframes nav-in { to { transform:translateY(0); } }
 .n-logo { min-height:44px;display:flex;align-items:center;font-family:'Cormorant Garamond',serif;font-size:1.1rem;letter-spacing:.08em;color:var(--pure);position:absolute;left:var(--pad);z-index:1; }
 .n-links { display:flex;gap:2.5rem;list-style:none;position:relative;z-index:1; }
-.n-links a { font-family:'Inter',sans-serif;font-size:.73rem;letter-spacing:.13em;color:var(--mid);transition:color .2s; }
+.n-links a { min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif;font-size:.73rem;letter-spacing:.13em;color:var(--mid);transition:color .2s; }
 .n-links a:hover { color:var(--pure); }
 /* ════════════════ HERO ════════════════ */
 .hero {
@@ -182,7 +182,7 @@ nav::before { content:'';position:absolute;inset:0;background:linear-gradient(to
 }
 .hero-scroll {
   position:absolute;right:calc(clamp(2.5rem,10vw,10rem) - 120px);bottom:calc(var(--pad) + .55rem);
-  z-index:3;width:min(230px,28vw);
+  z-index:3;width:min(230px,28vw);min-height:44px;
   display:flex;flex-direction:column;gap:.95rem;
   font-family:'Inter',sans-serif;
   font-size:.60rem;font-weight:600;

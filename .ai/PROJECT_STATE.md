@@ -7,6 +7,6 @@
 - Deployment: GitHub Pages custom-domain release path; production not changed yet.
 - Legacy: `polarrasmy/rasmy-studio` is an older Rasmy.co version, not a separate service; compare it read-only, preserve only verified useful material here, then treat it as an archive candidate.
 - Conversion: added an original three-step process section covering alignment, production/finishing, and agreed delivery outputs without legacy pricing, timelines, guarantees, or unsupported claims.
-- Accessibility: contact inputs now meet the 44px minimum tap-target height.
-- Validation: HTML/local refs passed; desktop and 390px browser smoke passed with 3 process steps, no overflow, broken images, console errors, or sub-44px visible controls.
+- Accessibility: contact inputs, desktop navigation, and the hero scroll link now provide at least 44px interaction targets.
+- Validation: HTML/local refs and desktop/390px browser smoke passed with 3 process steps, keyboard focus, reduced motion, no overflow, broken images, console errors, or sub-44px visible controls.
 - Next: audit remaining portfolio claims against source evidence.
