@@ -6,4 +6,7 @@
 - GitHub: public origin configured; CLI write authorization still requires account re-verification.
 - Deployment: GitHub Pages custom-domain release path; production not changed yet.
 - Legacy: `polarrasmy/rasmy-studio` is an older Rasmy.co version, not a separate service; compare it read-only, preserve only verified useful material here, then treat it as an archive candidate.
-- Next: audit conversion copy on the canonical portfolio without importing the legacy page's unsupported claims or pricing.
+- Conversion: added an original three-step process section covering alignment, production/finishing, and agreed delivery outputs without legacy pricing, timelines, guarantees, or unsupported claims.
+- Accessibility: contact inputs now meet the 44px minimum tap-target height.
+- Validation: HTML/local refs passed; desktop and 390px browser smoke passed with 3 process steps, no overflow, broken images, console errors, or sub-44px visible controls.
+- Next: audit remaining portfolio claims against source evidence.
