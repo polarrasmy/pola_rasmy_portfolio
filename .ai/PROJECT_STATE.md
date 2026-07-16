@@ -9,6 +9,6 @@
 - Conversion: the project brief now has visible labels, useful-context validation, accessible errors, and a precise WhatsApp CTA without importing legacy claims or pricing.
 - Contact verification: HTML/refs pass; desktop and 390x844 browser smoke pass with no overflow, broken images, small controls, or console errors; both validation branches focus the relevant field.
 - Process: added an original three-step section covering alignment, production/finishing, and agreed delivery outputs without legacy pricing, timelines, guarantees, or unsupported claims.
-- Accessibility: contact inputs now meet the 44px minimum tap-target height.
-- Validation: static checks and desktop/390px browser smoke passed with 3 process steps, no overflow, broken images, console errors, or sub-44px visible controls.
+- Accessibility: contact inputs, desktop navigation, and the hero scroll link now provide at least 44px interaction targets.
+- Validation: static checks and desktop/390px browser smoke passed with 3 process steps, keyboard focus, reduced motion, no overflow, broken images, console errors, or sub-44px visible controls.
 - Next: audit remaining portfolio claims against source evidence.
