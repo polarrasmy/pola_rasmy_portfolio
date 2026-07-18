@@ -11,5 +11,6 @@
 - Process: added an original three-step section covering alignment, production/finishing, and agreed delivery outputs without legacy pricing, timelines, guarantees, or unsupported claims.
 - Accessibility: contact inputs, desktop navigation, and the hero scroll link now provide at least 44px interaction targets.
 - Validation: static checks and desktop/390px browser smoke passed with 3 process steps, keyboard focus, reduced motion, no overflow, broken images, console errors, or sub-44px visible controls.
-- Claims audit: `docs/PUBLIC_CLAIMS_AUDIT.md` inventories evidence needed for credits, titles, client logos, production scope, location, and availability; it does not mark unsupported claims as verified.
-- Next: attach owner-approved evidence and permissions, then soften or remove any claim that cannot be substantiated before production release.
+- Claims audit: `docs/PUBLIC_CLAIMS_AUDIT.md` inventories evidence needed for credits, titles, portfolio names, production scope, location, and availability; it does not mark unsupported claims as verified.
+- Claims wording: replaced the unsupported “Trusted by” endorsement with the neutral editorial label “Portfolio Index”; names still require owner evidence or permission before release.
+- Next: attach owner-approved evidence for the named portfolio entries, then retain only names with a substantiated credit or permission before production release.
