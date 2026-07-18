@@ -101,7 +101,7 @@ nav::before { content:'';position:absolute;inset:0;background:linear-gradient(to
 @keyframes nav-in { to { transform:translateY(0); } }
 .n-logo { min-height:44px;display:flex;align-items:center;font-family:'Cormorant Garamond',serif;font-size:1.1rem;letter-spacing:.08em;color:var(--pure);position:absolute;left:var(--pad);z-index:1; }
 .n-links { display:flex;gap:2.5rem;list-style:none;position:relative;z-index:1; }
-.n-links a { font-family:'Inter',sans-serif;font-size:.73rem;letter-spacing:.13em;color:var(--mid);transition:color .2s; }
+.n-links a { min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif;font-size:.73rem;letter-spacing:.13em;color:var(--mid);transition:color .2s; }
 .n-links a:hover { color:var(--pure); }
 /* ════════════════ HERO ════════════════ */
 .hero {
@@ -182,7 +182,7 @@ nav::before { content:'';position:absolute;inset:0;background:linear-gradient(to
 }
 .hero-scroll {
   position:absolute;right:calc(clamp(2.5rem,10vw,10rem) - 120px);bottom:calc(var(--pad) + .55rem);
-  z-index:3;width:min(230px,28vw);
+  z-index:3;width:min(230px,28vw);min-height:44px;
   display:flex;flex-direction:column;gap:.95rem;
   font-family:'Inter',sans-serif;
   font-size:.60rem;font-weight:600;
@@ -659,6 +659,33 @@ section { padding:clamp(5rem,10vw,9rem) var(--pad);border-bottom:1px solid var(-
   .city-name { font-size:2.25rem; }
 }
 
+/* ════════ PROCESS ════════ */
+.process-intro {
+  display:grid;grid-template-columns:minmax(0,1.15fr) minmax(260px,.65fr);
+  gap:clamp(2rem,7vw,7rem);align-items:end;margin:1.8rem 0 3rem;
+}
+.process-title {
+  font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,7vw,6.4rem);
+  font-weight:500;letter-spacing:.01em;line-height:.84;color:var(--pure);
+}
+.process-title em { color:var(--gold);font-style:normal; }
+.process-note { max-width:34rem;color:var(--mid);font-size:.92rem;line-height:1.75; }
+.process-grid { display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--seam); }
+.process-step { min-height:260px;padding:2rem 1.8rem;border-bottom:1px solid var(--seam);position:relative; }
+.process-step + .process-step { border-left:1px solid var(--seam); }
+.process-num { display:block;color:var(--gold);font-size:.58rem;font-weight:700;letter-spacing:.26em;margin-bottom:4rem; }
+.process-step h3 { color:var(--pure);font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3vw,3rem);font-weight:500;line-height:1;margin-bottom:1rem; }
+.process-step p { color:var(--mid);font-size:.84rem;line-height:1.75;max-width:25rem; }
+.process-output { display:block;margin-top:1.2rem;color:rgba(238,235,228,.7);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase; }
+
+@media (max-width: 760px) {
+  .process-intro { grid-template-columns:1fr;gap:1.4rem; }
+  .process-grid { grid-template-columns:1fr; }
+  .process-step { min-height:0;padding:1.7rem 0; }
+  .process-step + .process-step { border-left:0; }
+  .process-num { margin-bottom:2rem; }
+}
+
 /* ════════ SERVICES ════════ */
 .svc-list { margin-top:4rem; }
 .svc {
@@ -966,6 +993,7 @@ body.menu-open .n-toggle span:nth-child(3) { transform:translateY(-10px) rotate(
 .dc-field-label { margin-top:.2rem;font-family:'Inter',sans-serif;font-size:.61rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(238,235,228,.62); }
 .dc-field-label .dc-required { color:var(--gold); }
 .dc-form input,.dc-form textarea { font-family:'Inter',sans-serif;font-size:16px;color:var(--cream);background:rgba(8,8,9,.5);border:1px solid rgba(200,160,80,.2);border-radius:0;padding:.7rem .85rem;width:100%;transition:border-color .25s,background .25s;resize:none; }
+.dc-form input { min-height:44px; }
 .dc-form input::placeholder,.dc-form textarea::placeholder { color:rgba(238,235,228,.4); }
 .dc-form input:focus,.dc-form textarea:focus { outline:none;border-color:rgba(200,160,80,.55);background:rgba(14,13,12,.7); }
 .dc-form [aria-invalid="true"] { border-color:#d58b75; }
@@ -1254,6 +1282,36 @@ body.menu-open .n-toggle span:nth-child(3) { transform:translateY(-10px) rotate(
         <div class="city-role">Global reach · available worldwide</div>
       </div>
     </div>
+  </div>
+</section>
+
+
+<!-- PROCESS -->
+<section id="process">
+  <p class="s-lbl rv no-dash">How We Work</p>
+  <div class="process-intro">
+    <h2 class="process-title rv d1">ONE IDEA.<br><em>THREE MOVES.</em></h2>
+    <p class="process-note rv d2">A clear route from the first conversation to the final handoff — shaped around the story, the production, and where the film needs to live.</p>
+  </div>
+  <div class="process-grid rv d2">
+    <article class="process-step">
+      <span class="process-num">01 · ALIGN</span>
+      <h3>Find the film.</h3>
+      <p>Define the audience, purpose, visual world, locations, and practical boundaries before cameras move.</p>
+      <span class="process-output">Brief · treatment · production route</span>
+    </article>
+    <article class="process-step">
+      <span class="process-num">02 · MAKE</span>
+      <h3>Build the world.</h3>
+      <p>Direction, crew, production, and finishing stay connected so the original idea survives every handoff.</p>
+      <span class="process-output">Direction · production · finishing</span>
+    </article>
+    <article class="process-step">
+      <span class="process-num">03 · DELIVER</span>
+      <h3>Let it travel.</h3>
+      <p>Prepare the master film and the agreed platform cutdowns, with a clear review and delivery handoff.</p>
+      <span class="process-output">Master film · agreed cutdowns · handoff</span>
+    </article>
   </div>
 </section>
 
