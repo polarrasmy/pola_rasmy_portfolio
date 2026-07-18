@@ -963,9 +963,14 @@ body.menu-open .n-toggle span:nth-child(3) { transform:translateY(-10px) rotate(
 .city-role { font-family:'Inter',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(238,235,228,.55);line-height:1.5; }
 .dc-subcopy { font-family:'Inter',sans-serif;font-size:.78rem;line-height:1.55;color:rgba(238,235,228,.58);max-width:340px;margin-bottom:1.1rem; }
 .dc-form { display:flex;flex-direction:column;gap:.5rem;width:min(340px,100%); }
+.dc-field-label { margin-top:.2rem;font-family:'Inter',sans-serif;font-size:.61rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(238,235,228,.62); }
+.dc-field-label .dc-required { color:var(--gold); }
 .dc-form input,.dc-form textarea { font-family:'Inter',sans-serif;font-size:16px;color:var(--cream);background:rgba(8,8,9,.5);border:1px solid rgba(200,160,80,.2);border-radius:0;padding:.7rem .85rem;width:100%;transition:border-color .25s,background .25s;resize:none; }
 .dc-form input::placeholder,.dc-form textarea::placeholder { color:rgba(238,235,228,.4); }
 .dc-form input:focus,.dc-form textarea:focus { outline:none;border-color:rgba(200,160,80,.55);background:rgba(14,13,12,.7); }
+.dc-form [aria-invalid="true"] { border-color:#d58b75; }
+.dc-error { margin:.2rem 0 0;font-family:'Inter',sans-serif;font-size:.72rem;line-height:1.45;color:#e3a18e; }
+.dc-error[hidden] { display:none; }
 .dc-submit { display:inline-flex;align-items:center;justify-content:space-between;gap:.9rem;width:100%;min-height:46px;margin-top:.25rem;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);background:rgba(200,160,80,.1);border:1px solid rgba(200,160,80,.4);padding:.55rem .55rem .55rem 1rem;transition:background .25s,border-color .25s; }
 .dc-submit:hover { background:rgba(200,160,80,.18);border-color:rgba(240,201,121,.7); }
 .dc-submit .dc-arrow { flex:0 0 32px;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(200,160,80,.4);color:var(--gold); }
@@ -1276,12 +1281,16 @@ body.menu-open .n-toggle span:nth-child(3) { transform:translateY(-10px) rotate(
       <p class="dc-label">Let's Connect</p>
       <div class="dc-availability"><span class="bp"></span>Based between Cairo &amp; China &middot; Available Worldwide</div>
       <h2 class="dc-heading">Have a film<br>that needs to<br><em>cross borders?</em></h2>
-      <p class="dc-subcopy">Tell me what you're making — message me on WhatsApp, or book a call below.</p>
+      <p class="dc-subcopy">Share your project type, timeline or location. I'll open a ready-to-send WhatsApp brief, or you can book a call below.</p>
       <form class="dc-form" id="leadForm" novalidate>
-        <input type="text" id="pf_name" placeholder="Your name" autocomplete="name" required>
-        <input type="text" id="pf_type" placeholder="Project type — car film, brand, event…">
-        <textarea id="pf_msg" rows="2" placeholder="A line about it — timeline / location"></textarea>
-        <button type="submit" class="dc-submit">Send via WhatsApp
+        <label class="dc-field-label" for="pf_name">Your name <span class="dc-required" aria-hidden="true">*</span></label>
+        <input type="text" id="pf_name" placeholder="Name" autocomplete="name" required aria-describedby="leadError">
+        <label class="dc-field-label" for="pf_type">Project type</label>
+        <input type="text" id="pf_type" placeholder="Car film, brand film, destination…" aria-describedby="leadError">
+        <label class="dc-field-label" for="pf_msg">Timeline or location</label>
+        <textarea id="pf_msg" rows="2" placeholder="A short line is enough" aria-describedby="leadError"></textarea>
+        <p class="dc-error" id="leadError" role="alert" aria-live="polite" hidden></p>
+        <button type="submit" class="dc-submit">Start on WhatsApp
           <span class="dc-arrow" aria-hidden="true"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 0 0-6.9 12l-1 3.6 3.7-1A8 8 0 1 0 8 0Zm4.6 11.3c-.2.5-1.1 1-1.5 1-.4.1-.9.1-1.4-.1-.3-.1-.8-.3-1.4-.5-2.4-1-4-3.5-4.1-3.6-.1-.2-1-1.3-1-2.4s.6-1.7.8-2c.2-.2.4-.3.6-.3h.4c.1 0 .3 0 .5.4l.7 1.6c0 .1.1.3 0 .4l-.3.5-.3.3c-.1.1-.2.2-.1.4l.6 1c.5.7 1 1 1.3 1.2.3.2.5.1.6 0l.6-.7c.2-.2.3-.2.5-.1l1.5.7c.2.1.4.2.4.3.1.1.1.4 0 .5Z"/></svg></span>
         </button>
       </form>
@@ -1410,15 +1419,25 @@ document.querySelectorAll('.wc[role=button]').forEach(c=>{c.addEventListener('ke
 /* Contact form -> WhatsApp with prefilled details */
 (function(){
   var f=document.getElementById('leadForm');if(!f)return;
+  var error=document.getElementById('leadError');
+  function setError(message,field){
+    if(error){error.textContent=message;error.hidden=!message;}
+    f.querySelectorAll('[aria-invalid="true"]').forEach(function(el){el.removeAttribute('aria-invalid');});
+    if(field){field.setAttribute('aria-invalid','true');field.focus();}
+  }
+  f.addEventListener('input',function(){setError('',null);});
   f.addEventListener('submit',function(e){
     e.preventDefault();
     function v(id){var el=document.getElementById(id);return el?(el.value||'').trim():'';}
     var name=v('pf_name'),type=v('pf_type'),msg=v('pf_msg');
+    if(!name){setError('Please add your name before opening WhatsApp.',document.getElementById('pf_name'));return;}
+    if(!type&&!msg){setError('Add a project type, timeline or location so the brief has useful context.',document.getElementById('pf_type'));return;}
+    setError('',null);
     var lines=["Hi Pola — I'd like to work with you."];
     if(name)lines.push('Name: '+name);
     if(type)lines.push('Project: '+type);
     if(msg)lines.push('Details: '+msg);
-    window.open('https://wa.me/8619859039183?text='+encodeURIComponent(lines.join('\n')),'_blank','noopener');
+    window.open('https://wa.me/8619859039183?text='+encodeURIComponent(lines.join('\n')),'_blank','noopener,noreferrer');
   });
 })();
 </script>
