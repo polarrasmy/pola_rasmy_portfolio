@@ -10,7 +10,7 @@ legacy pricing, awards, client lists, or promises into this ledger.
 | --- | --- | --- | --- |
 | Apple TV+ `Fountain of Youth` credit | metadata, hero credit | official end-credit frame, production document, or authoritative public credit naming Pola Rasmy and the role | Owner evidence required |
 | China Tourism Ambassador | metadata, structured data, biography | appointment letter or authoritative public announcement that states the title and scope | Owner evidence required |
-| Named brand/client logos | “Trusted by” marquee | one approved project credit, contract excerpt, published work link, or client permission for every displayed name | Owner evidence required |
+| Named brand/client logos | Neutral “Portfolio Index” marquee; no endorsement wording | one approved project credit, contract excerpt, published work link, or client permission for every displayed name | Owner evidence required |
 | Leads full productions and international crews | structured data, biography | representative credited productions or owner-approved capability statement with a defined scope | Owner evidence required |
 | Based between Cairo and China | biography, contact panel | current owner confirmation; re-check whenever location or operating base changes | Owner confirmation required |
 | Available worldwide | metadata, contact panel | current owner confirmation; treat as availability, not a guarantee of travel or booking | Owner confirmation required |
