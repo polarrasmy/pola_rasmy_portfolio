@@ -612,7 +612,7 @@ body.menu-open .site-nav{
   </ul>
 </nav>
 
-<main id="main">
+<main id="main" tabindex="-1">
   <section class="hero" aria-labelledby="hero-title">
     <div class="hero-media">
       <img src="section1-image.webp" width="1920" height="1280" alt="Pola Rasmy directing on location in China">
@@ -862,6 +862,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link=>{
     event.preventDefault();
     target.scrollIntoView({behavior:'smooth',block:'start'});
     history.replaceState(null,'',href);
+    if(link.classList.contains('skip'))target.focus({preventScroll:true});
   });
 });
 addEventListener('load',()=>{
@@ -882,10 +883,18 @@ document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
 const modal=document.getElementById('video-modal');
 const frame=document.getElementById('video-frame');
 const closeButton=modal.querySelector('.modal-close');
+const modalBackground=[...document.body.children].filter(element=>element!==modal&&element.tagName!=='SCRIPT');
 let modalOpener=null;
+function setModalBackgroundInert(inert){
+  modalBackground.forEach(element=>{
+    if(inert)element.setAttribute('inert','');
+    else element.removeAttribute('inert');
+  });
+}
 function openVideo(id){
   modalOpener=document.activeElement;
   frame.src=`https://player.vimeo.com/video/${id}?autoplay=1&badge=0&autopause=0`;
+  setModalBackgroundInert(true);
   modal.classList.add('open');
   document.body.classList.add('modal-open');
   setTimeout(()=>closeButton.focus(),80);
@@ -894,6 +903,7 @@ function closeVideo(){
   modal.classList.remove('open');
   document.body.classList.remove('modal-open');
   frame.src='';
+  setModalBackgroundInert(false);
   if(modalOpener){modalOpener.focus();modalOpener=null}
 }
 document.querySelectorAll('[data-vimeo]').forEach(button=>{
