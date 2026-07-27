@@ -3,40 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pola Rasmy — Film Director | Brand, Automotive &amp; Destination Films · Cairo × China</title>
+<title>Pola Rasmy — Film Director · Cairo × China</title>
 
 <!-- SEO -->
-<meta name="description" content="Pola Rasmy is an Egyptian film director making cinematic brand, automotive and destination films between Cairo and China. Credited on Apple TV+'s Fountain of Youth (2025). China Tourism Ambassador. Available worldwide.">
+<meta name="description" content="Egyptian film director creating cinematic brand, automotive and destination films between Cairo and China. Apple TV+ credited. Available worldwide.">
 <meta name="keywords" content="Pola Rasmy, car film director, automotive film director, cinematic car films, commercial director Egypt, filmmaker China, Cairo film director, brand films, Apple TV+ Fountain of Youth, China Tourism Ambassador, King Long Egypt, MENA China bridge, AI filmmaking, بولا رسمي">
 <meta name="author" content="Pola Rasmy">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#080809">
-<link rel="canonical" href="https://polarrasmy.github.io/pola_rasmy_portfolio/">
+<link rel="canonical" href="https://rasmy.co/">
 
 <!-- Open Graph (WhatsApp, LinkedIn, Facebook, iMessage) -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pola Rasmy">
-<meta property="og:title" content="Pola Rasmy — Film Director | Brand, Automotive &amp; Destination Films · Cairo × China">
+<meta property="og:title" content="Pola Rasmy — Film Director · Cairo × China">
 <meta property="og:description" content="Cinematic brand, automotive and destination films, directed between Cairo and China. China Tourism Ambassador. Apple TV+ credited.">
-<meta property="og:url" content="https://polarrasmy.github.io/pola_rasmy_portfolio/">
-<meta property="og:image" content="https://polarrasmy.github.io/pola_rasmy_portfolio/fountainofyouth.jpeg">
+<meta property="og:url" content="https://rasmy.co/">
+<meta property="og:image" content="https://rasmy.co/fountainofyouth.jpeg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="719">
 <meta property="og:image:alt" content="Pola Rasmy — Egyptian car &amp; brand film director, credited on Apple TV+ Fountain of Youth">
 
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Pola Rasmy — Film Director | Brand, Automotive &amp; Destination Films · Cairo × China">
+<meta name="twitter:title" content="Pola Rasmy — Film Director · Cairo × China">
 <meta name="twitter:description" content="Cinematic brand, automotive and destination films, directed between Cairo and China. China Tourism Ambassador. Apple TV+ credited.">
-<meta name="twitter:image" content="https://polarrasmy.github.io/pola_rasmy_portfolio/fountainofyouth.jpeg">
+<meta name="twitter:image" content="https://rasmy.co/fountainofyouth.jpeg">
+<meta name="twitter:image:alt" content="Pola Rasmy — Egyptian car and brand film director">
 
 <!-- Favicon (PR monogram, brand gold) -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23080809'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='14' font-weight='600' fill='%23c8a050' text-anchor='middle'%3EPR%3C/text%3E%3C/svg%3E">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="dns-prefetch" href="https://player.vimeo.com">
-<link rel="preload" as="image" href="section1-image.jpg" fetchpriority="high">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="section1-image.webp" type="image/webp" fetchpriority="high">
+<link rel="preload" as="font" href="fonts/cormorant-garamond-latin.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="font" href="fonts/inter-latin.woff2" type="font/woff2" crossorigin>
 <style>
+@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:300 700;font-display:swap;src:url("fonts/cormorant-garamond-latin.woff2") format("woff2")}
+@font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:400;font-display:swap;src:url("fonts/cormorant-garamond-italic-latin.woff2") format("woff2")}
+@font-face{font-family:Inter;font-style:normal;font-weight:300 700;font-display:swap;src:url("fonts/inter-latin.woff2") format("woff2")}
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 :root {
   --ink:    #080809;
@@ -47,7 +53,7 @@
   --pure:   #ffffff;
   --cream:  #eeebe4;
   --mid:    #888884;
-  --dim:    #484844;
+  --dim:    #7D7D78;
   --gold:   #c8a050;
   --gold-d: rgba(200,160,80,.1);
   --pad:    clamp(1.5rem, 7vw, 7rem);
@@ -62,7 +68,13 @@ body {
 ::-webkit-scrollbar { width: 2px; }
 ::-webkit-scrollbar-thumb { background: var(--gold); }
 a { color: inherit; text-decoration: none; }
-
+.skip-link {
+  position:fixed;top:8px;left:8px;z-index:10000;
+  transform:translateY(-160%);
+  background:var(--gold);color:var(--ink);
+  padding:.75rem 1rem;font-weight:700;
+}
+.skip-link:focus { transform:none; }
 /* Grain */
 body::before {
   content: ''; position: fixed; inset: 0; z-index: 1000; pointer-events: none;
@@ -98,6 +110,7 @@ nav {
   animation:nav-in .6s 0.5s cubic-bezier(.16,1,.3,1) forwards;
 }
 nav::before { content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(8,8,9,.92),transparent);pointer-events:none; }
+nav.scrolled::before { background:rgba(8,8,9,.94);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--seam); }
 @keyframes nav-in { to { transform:translateY(0); } }
 .n-logo { font-family:'Cormorant Garamond',serif;font-size:1.1rem;letter-spacing:.08em;color:var(--pure);position:absolute;left:var(--pad);z-index:1; }
 .n-links { display:flex;gap:2.5rem;list-style:none;position:relative;z-index:1; }
@@ -138,7 +151,7 @@ nav::before { content:'';position:absolute;inset:0;background:linear-gradient(to
 .hero-over {
   font-family:'Inter',sans-serif;
   font-size:13px;letter-spacing:.28em;
-  color:#8A6A3B;text-transform:uppercase;
+  color:#9B7B48;text-transform:uppercase;
   margin-bottom:16px;
   font-weight: 700;
   opacity:0;animation:fadeUp 1s .3s forwards;
@@ -230,7 +243,7 @@ nav::before { content:'';position:absolute;inset:0;background:linear-gradient(to
 .hero-play {
   position:relative;
   width:82px;height:82px;border-radius:50%;
-  border:1px solid #8A6A3B;
+  border:1px solid #9B7B48;
   display:flex;align-items:center;justify-content:center;
   background:transparent;backdrop-filter:none;
   box-shadow:0 0 30px rgba(200,169,110,.34),0 0 58px rgba(138,106,59,.18),inset 0 0 18px rgba(200,169,110,.06);
@@ -247,7 +260,7 @@ nav::before { content:'';position:absolute;inset:0;background:linear-gradient(to
   letter-spacing:.1em;
   line-height:1;
   font-weight: 600;
-  color:#8A6A3B;
+  color:#9B7B48;
   text-transform:uppercase;
 }
 @keyframes ripple { 0%{transform:scale(1);opacity:.4}100%{transform:scale(1.9);opacity:0} }
@@ -382,7 +395,7 @@ section { padding:clamp(5rem,10vw,9rem) var(--pad);border-bottom:1px solid var(-
   font-family:'Inter',sans-serif;
   font-size:13px;
   letter-spacing:.28em;
-  color:#8A6A3B;
+  color:#9B7B48;
   text-transform:uppercase;
   margin-bottom:16px;
   font-weight:700;
@@ -514,6 +527,7 @@ section { padding:clamp(5rem,10vw,9rem) var(--pad);border-bottom:1px solid var(-
 .wc {
   flex:0 0 clamp(145px,23.5vw,300px);
   aspect-ratio:2/3;position:relative;overflow:hidden;
+  border:0;padding:0;text-align:left;color:inherit;font:inherit;
   background:linear-gradient(135deg,#15110b,#0a0a0b);
   background:
     linear-gradient(to bottom,rgba(8,8,9,.18),rgba(8,8,9,.42)),
@@ -550,7 +564,7 @@ section { padding:clamp(5rem,10vw,9rem) var(--pad);border-bottom:1px solid var(-
 .lm-track span {
   flex:0 0 auto;white-space:nowrap;
   font-family:'Inter',sans-serif;font-size:clamp(1.05rem,1.7vw,1.5rem);font-weight:600;
-  letter-spacing:.01em;color:rgba(238,235,228,.4);transition:color .3s;
+  letter-spacing:.01em;color:rgba(238,235,228,.62);transition:color .3s;
 }
 .lm-track span:hover { color:var(--pure); }
 
@@ -591,7 +605,7 @@ section { padding:clamp(5rem,10vw,9rem) var(--pad);border-bottom:1px solid var(-
 .a-stat:first-child { border-top:0; }
 .a-num { font-family:'Inter',sans-serif;font-size:clamp(2.1rem,3vw,3.15rem);font-weight:400;letter-spacing:.04em;color:var(--gold);line-height:.85;margin-bottom:.35rem; }
 .a-num mark { background:none;color:var(--gold); }
-.a-lbl { font-family:'Inter',sans-serif;font-size:clamp(.62rem,.72vw,.72rem);line-height:1.4;letter-spacing:.24em;color:rgba(238,235,228,.42);text-transform:uppercase; }
+.a-lbl { font-family:'Inter',sans-serif;font-size:clamp(.62rem,.72vw,.72rem);line-height:1.4;letter-spacing:.24em;color:rgba(238,235,228,.65);text-transform:uppercase; }
 
 @media (max-width: 760px) {
   /* stack cleanly: photo -> bio -> stats (no overlap) */
@@ -720,7 +734,7 @@ section { padding:clamp(5rem,10vw,9rem) var(--pad);border-bottom:1px solid var(-
 }
 .dc-label {
   font-family:'Inter',sans-serif;font-size:.62rem;font-weight:700;
-  letter-spacing:.32em;text-transform:uppercase;color:#8A6A3B;
+  letter-spacing:.32em;text-transform:uppercase;color:#9B7B48;
   margin-bottom:1.15rem;
 }
 .dc-connect .dc-label { margin-bottom:1rem; }
@@ -768,7 +782,7 @@ section { padding:clamp(5rem,10vw,9rem) var(--pad);border-bottom:1px solid var(-
 }
 .dc-connect::after {
   content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
-  background:url("fountain.png") right center / auto 118% no-repeat;
+  background:url("fountain.webp") right center / auto 118% no-repeat;
   
   -webkit-mask-image:linear-gradient(90deg,transparent 0%,transparent 34%,rgba(0,0,0,.08) 52%,#000 82%);
   mask-image:linear-gradient(90deg,transparent 0%,transparent 34%,rgba(0,0,0,.08) 52%,#000 82%);
@@ -848,7 +862,7 @@ footer {
   line-height:1;
   letter-spacing:.26em;
   text-transform:uppercase;
-  color:rgba(238,235,228,.36);
+  color:rgba(238,235,228,.58);
 }
 .ft-l { justify-self:start; }
 .ft-r { justify-self:center; white-space:nowrap; }
@@ -883,7 +897,7 @@ footer {
 #lb.on .lb-w { transform:scale(1); }
 .lb-r { padding-top:56.25%;position:relative;border-radius:12px;overflow:hidden; }
 .lb-r iframe { position:absolute;inset:0;width:100%;height:100%; }
-.lb-x { position:absolute;top:-2.8rem;right:0;font-family:'Inter',sans-serif;font-size:.6rem;letter-spacing:.2em;color:rgba(255,255,255,.35);background:none;border:none;transition:color .2s; }
+.lb-x { position:absolute;top:-2.8rem;right:0;min-height:44px;padding:0 .5rem;font-family:'Inter',sans-serif;font-size:.6rem;letter-spacing:.2em;color:rgba(255,255,255,.65);background:none;border:none;transition:color .2s; }
 .lb-x:hover { color:var(--pure); }
 
 /* ════════ MOBILE NAV TOGGLE ════════ */
@@ -956,21 +970,24 @@ body.menu-open .n-toggle span:nth-child(3) { transform:translateY(-10px) rotate(
 .credit-title { font-size:clamp(52px,11vw,84px); }
 #clients { padding-top:clamp(3rem,5vw,4rem); padding-bottom:clamp(3rem,5vw,4rem); }
 .logos-marquee { margin-top:1.4rem; }
-.clients-eyebrow { display:flex;align-items:center;gap:1.2rem;font-family:'Inter',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:#8A6A3B;margin:0; }
+.clients-eyebrow { display:flex;align-items:center;gap:1.2rem;font-family:'Inter',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:#9B7B48;margin:0; }
 .clients-eyebrow .ce-line { flex:1;height:1px;background:linear-gradient(90deg,rgba(200,160,80,.28),transparent); }
 #presence { padding-top:clamp(3.5rem,6vw,5rem); padding-bottom:clamp(3.5rem,6vw,5rem); }
 .city { min-height:248px; }
 .city-role { font-family:'Inter',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(238,235,228,.55);line-height:1.5; }
 .dc-subcopy { font-family:'Inter',sans-serif;font-size:.78rem;line-height:1.55;color:rgba(238,235,228,.58);max-width:340px;margin-bottom:1.1rem; }
 .dc-form { display:flex;flex-direction:column;gap:.5rem;width:min(340px,100%); }
+.dc-field-label { margin:.35rem 0 -.15rem;font-family:'Inter',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#9B7B48; }
+.dc-field-label:first-child { margin-top:0; }
+.dc-field-label .optional { color:rgba(238,235,228,.65);font-weight:400;letter-spacing:.08em; }
 .dc-form input,.dc-form textarea { font-family:'Inter',sans-serif;font-size:16px;color:var(--cream);background:rgba(8,8,9,.5);border:1px solid rgba(200,160,80,.2);border-radius:0;padding:.7rem .85rem;width:100%;transition:border-color .25s,background .25s;resize:none; }
-.dc-form input::placeholder,.dc-form textarea::placeholder { color:rgba(238,235,228,.4); }
+.dc-form input::placeholder,.dc-form textarea::placeholder { color:rgba(238,235,228,.62); }
 .dc-form input:focus,.dc-form textarea:focus { outline:none;border-color:rgba(200,160,80,.55);background:rgba(14,13,12,.7); }
 .dc-submit { display:inline-flex;align-items:center;justify-content:space-between;gap:.9rem;width:100%;min-height:46px;margin-top:.25rem;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);background:rgba(200,160,80,.1);border:1px solid rgba(200,160,80,.4);padding:.55rem .55rem .55rem 1rem;transition:background .25s,border-color .25s; }
 .dc-submit:hover { background:rgba(200,160,80,.18);border-color:rgba(240,201,121,.7); }
 .dc-submit .dc-arrow { flex:0 0 32px;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(200,160,80,.4);color:var(--gold); }
 .dc-submit .dc-arrow svg { width:14px;height:14px; }
-.dc-booknote { font-family:'Inter',sans-serif;font-size:.62rem;letter-spacing:.05em;color:rgba(238,235,228,.45);margin:.5rem 0 0;text-align:center; }
+.dc-booknote { font-family:'Inter',sans-serif;font-size:.62rem;letter-spacing:.05em;color:rgba(238,235,228,.62);margin:.5rem 0 0;text-align:center; }
 /* Footer social icons */
 .ft-links { gap:clamp(.2rem,1.2vw,1rem); }
 .ft-links a { display:inline-flex;align-items:center;justify-content:center;padding:13px; }
@@ -993,13 +1010,13 @@ body.menu-open .n-toggle span:nth-child(3) { transform:translateY(-10px) rotate(
   "@graph": [
     {
       "@type": "Person",
-      "@id": "https://polarrasmy.github.io/pola_rasmy_portfolio/#person",
+      "@id": "https://rasmy.co/#person",
       "name": "Pola Rasmy",
       "alternateName": "بولا رسمي",
       "jobTitle": "Film Director & Cinematographer",
       "nationality": "Egyptian",
-      "image": "https://polarrasmy.github.io/pola_rasmy_portfolio/about.jpeg",
-      "url": "https://polarrasmy.github.io/pola_rasmy_portfolio/",
+      "image": "https://rasmy.co/about.jpeg",
+      "url": "https://rasmy.co/",
       "email": "polaraafat@icloud.com",
       "worksFor": { "@type": "Organization", "name": "King Long Egypt" },
       "homeLocation": [{ "@type": "Place", "name": "Cairo, Egypt" }, { "@type": "Place", "name": "China" }],
@@ -1009,7 +1026,7 @@ body.menu-open .n-toggle span:nth-child(3) { transform:translateY(-10px) rotate(
       "sameAs": [
         "https://x.com/polarasmyfilms",
         "https://www.instagram.com/polarasmy/",
-        "https://www.youtube.com/@polarasmy",
+        "https://www.youtube.com/@polarasmyy",
         "https://www.behance.net/PolaRasmy",
         "https://www.imdb.com/name/nm17630658/",
         "https://www.facebook.com/polarasmyfilms",
@@ -1018,35 +1035,36 @@ body.menu-open .n-toggle span:nth-child(3) { transform:translateY(-10px) rotate(
     },
     {
       "@type": "Movie",
-      "@id": "https://polarrasmy.github.io/pola_rasmy_portfolio/#fountain-of-youth",
+      "@id": "https://rasmy.co/#fountain-of-youth",
       "name": "Fountain of Youth",
       "url": "https://tv.apple.com/us/movie/fountain-of-youth/umc.cmc.z5xrwbjg3gergiowhrzg61tq",
       "datePublished": "2025",
       "publisher": { "@type": "Organization", "name": "Apple TV+" },
-      "contributor": { "@type": "Role", "roleName": "Camera Department", "contributor": { "@id": "https://polarrasmy.github.io/pola_rasmy_portfolio/#person" } }
+      "contributor": { "@type": "Role", "roleName": "Camera Department", "contributor": { "@id": "https://rasmy.co/#person" } }
     },
     {
       "@type": "VideoObject",
       "name": "Pola Rasmy — Showreel",
       "description": "Cinematic showreel of director and cinematographer Pola Rasmy.",
-      "thumbnailUrl": "https://polarrasmy.github.io/pola_rasmy_portfolio/fountainofyouth.jpeg",
+      "thumbnailUrl": "https://rasmy.co/fountainofyouth.jpeg",
       "uploadDate": "2025-01-01",
       "contentUrl": "https://vimeo.com/894736178",
       "embedUrl": "https://player.vimeo.com/video/894736178",
-      "director": { "@id": "https://polarrasmy.github.io/pola_rasmy_portfolio/#person" }
+      "director": { "@id": "https://rasmy.co/#person" }
     },
     {
       "@type": "Organization",
-      "@id": "https://polarrasmy.github.io/pola_rasmy_portfolio/#rasmy",
+      "@id": "https://rasmy.co/#rasmy",
       "name": "RASMY",
       "description": "Film production studio led by Pola Rasmy — cinematic brand, automotive and destination films, leading full productions and international crews between Cairo and China.",
-      "founder": { "@id": "https://polarrasmy.github.io/pola_rasmy_portfolio/#person" }
+      "founder": { "@id": "https://rasmy.co/#person" }
     }
   ]
 }
 </script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <div id="cur"></div><div id="cur2"></div><div id="pg"></div>
 
 <!-- LOADER -->
@@ -1061,7 +1079,7 @@ body.menu-open .n-toggle span:nth-child(3) { transform:translateY(-10px) rotate(
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="n-logo">POLA RASMY</a>
+  <a href="#main" class="n-logo">POLA RASMY</a>
   <button class="n-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
     <span></span><span></span><span></span>
   </button>
@@ -1074,10 +1092,11 @@ body.menu-open .n-toggle span:nth-child(3) { transform:translateY(-10px) rotate(
   </ul>
 </nav>
 
+<main id="main">
 <!-- HERO -->
 <section class="hero" style="padding:0;border:none;">
   <div class="hero-photo">
-    <img src="section1-image.jpg" alt="Pola Rasmy on location, Quanzhou China 2025" width="1680" height="937" fetchpriority="high" decoding="async">
+    <img src="section1-image.webp" alt="Pola Rasmy on location, Quanzhou China 2025" width="1500" height="836" fetchpriority="high" decoding="async">
   </div>
 
   <div class="hero-play-wrap">
@@ -1149,7 +1168,7 @@ body.menu-open .n-toggle span:nth-child(3) { transform:translateY(-10px) rotate(
       </a>
     </div>
     <div class="credit-right">
-      <img src="fountainofyouth.jpeg" alt="Pola Rasmy — credited in the camera department on Apple TV+ film Fountain of Youth (2025)" loading="lazy" decoding="async">
+      <img src="fountainofyouth.webp" width="1280" height="719" alt="Pola Rasmy — credited in the camera department on Apple TV+ film Fountain of Youth (2025)" loading="lazy" decoding="async" fetchpriority="low">
       <div class="credit-right-overlay"></div>
     </div>
   </div>
@@ -1163,13 +1182,13 @@ body.menu-open .n-toggle span:nth-child(3) { transform:translateY(-10px) rotate(
   <div class="work-wrap rv d2">
     <button class="work-nav prev" type="button" aria-label="Previous work" data-work-dir="-1"><svg viewBox="0 0 24 24" fill="none"><path d="M15 5L8 12L15 19" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
     <div class="work-grid">
-    <div class="wc" role="button" tabindex="0" aria-label="Play Shkoon Concert reel" onclick="openLb('894736178')"><img class="wc-img" loading="lazy" decoding="async" src="shkoon.jpg" alt="Shkoon Concert thumbnail"><div class="wp"><svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M1 1L11 7L1 13V1Z" fill="white"/></svg></div><div class="wi"><div class="wi-t">Shkoon Concert</div><div class="wi-s">Director · Cinematographer</div></div></div>
-    <div class="wc" role="button" tabindex="0" aria-label="Play Morshedy Group reel" onclick="openLb('937385349')"><img class="wc-img" loading="lazy" decoding="async" src="morshedy.jpg" alt="Morshedy Group thumbnail"><div class="wp"><svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M1 1L11 7L1 13V1Z" fill="white"/></svg></div><div class="wi"><div class="wi-t">Morshedy Group</div><div class="wi-s">Director · Brand Film</div></div></div>
-    <div class="wc" role="button" tabindex="0" aria-label="Play HAVAL H6 HEV reel" onclick="openLb('1075681105')"><img class="wc-img" loading="lazy" decoding="async" src="haval.jpg" alt="HAVAL H6 HEV thumbnail"><div class="wp"><svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M1 1L11 7L1 13V1Z" fill="white"/></svg></div><div class="wi"><div class="wi-t">HAVAL H6 HEV</div><div class="wi-s">Director · Automotive Film</div></div></div>
-    <div class="wc" role="button" tabindex="0" aria-label="Play BEA Chill reel" onclick="openLb('950585365')"><img class="wc-img" loading="lazy" decoding="async" src="beachill.jpg" alt="BEA Chill thumbnail"><div class="wp"><svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M1 1L11 7L1 13V1Z" fill="white"/></svg></div><div class="wi"><div class="wi-t">BEA Chill</div><div class="wi-s">Director · Commercial</div></div></div>
-    <div class="wc" role="button" tabindex="0" aria-label="Play Golf 2025 reel" onclick="openLb('1086692663')"><img class="wc-img" loading="lazy" decoding="async" src="golf.jpg" alt="Golf 2025 thumbnail"><div class="wp"><svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M1 1L11 7L1 13V1Z" fill="white"/></svg></div><div class="wi"><div class="wi-t">Golf 2025</div><div class="wi-s">Director · Event Film</div></div></div>
-    <div class="wc" role="button" tabindex="0" aria-label="Play Quanzhou calligraphy event film reel" onclick="openLb('1151610689')"><img class="wc-img" loading="lazy" decoding="async" src="630泉州笔会.jpg" alt="630泉州笔会 thumbnail"><div class="wp"><svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M1 1L11 7L1 13V1Z" fill="white"/></svg></div><div class="wi"><div class="wi-t">Quanzhou Calligraphy Gathering</div><div class="wi-s">Director · Cultural Film, China</div></div></div>
-    <div class="wc" role="button" tabindex="0" aria-label="Play Quanzhou tour event film reel" onclick="openLb('1151608525')"><img class="wc-img" loading="lazy" decoding="async" src="6月19日-20日游览泉州.jpg" alt="6月19日-20日游览泉州 thumbnail"><div class="wp"><svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M1 1L11 7L1 13V1Z" fill="white"/></svg></div><div class="wi"><div class="wi-t">Quanzhou City Film</div><div class="wi-s">Director · Tourism Film, China</div></div></div>  
+    <button type="button" class="wc" aria-label="Play Shkoon Concert reel" onclick="openLb('894736178')"><img class="wc-img" loading="lazy" decoding="async" fetchpriority="low" src="shkoon.webp" width="800" height="450" alt="Shkoon Concert thumbnail"><span class="wp"><svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M1 1L11 7L1 13V1Z" fill="white"/></svg></span><span class="wi"><span class="wi-t">Shkoon Concert</span><span class="wi-s">Director · Cinematographer</span></span></button>
+    <button type="button" class="wc" aria-label="Play Morshedy Group reel" onclick="openLb('937385349')"><img class="wc-img" loading="lazy" decoding="async" fetchpriority="low" src="morshedy.webp" width="800" height="450" alt="Morshedy Group thumbnail"><span class="wp"><svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M1 1L11 7L1 13V1Z" fill="white"/></svg></span><span class="wi"><span class="wi-t">Morshedy Group</span><span class="wi-s">Director · Brand Film</span></span></button>
+    <button type="button" class="wc" aria-label="Play HAVAL H6 HEV reel" onclick="openLb('1075681105')"><img class="wc-img" loading="lazy" decoding="async" fetchpriority="low" src="haval.webp" width="720" height="1280" alt="HAVAL H6 HEV thumbnail"><span class="wp"><svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M1 1L11 7L1 13V1Z" fill="white"/></svg></span><span class="wi"><span class="wi-t">HAVAL H6 HEV</span><span class="wi-s">Director · Automotive Film</span></span></button>
+    <button type="button" class="wc" aria-label="Play BEA Chill reel" onclick="openLb('950585365')"><img class="wc-img" loading="lazy" decoding="async" fetchpriority="low" src="beachill.webp" width="720" height="1280" alt="BEA Chill thumbnail"><span class="wp"><svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M1 1L11 7L1 13V1Z" fill="white"/></svg></span><span class="wi"><span class="wi-t">BEA Chill</span><span class="wi-s">Director · Commercial</span></span></button>
+    <button type="button" class="wc" aria-label="Play Golf 2025 reel" onclick="openLb('1086692663')"><img class="wc-img" loading="lazy" decoding="async" fetchpriority="low" src="golf.webp" width="720" height="1280" alt="Golf 2025 thumbnail"><span class="wp"><svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M1 1L11 7L1 13V1Z" fill="white"/></svg></span><span class="wi"><span class="wi-t">Golf 2025</span><span class="wi-s">Director · Event Film</span></span></button>
+    <button type="button" class="wc" aria-label="Play Quanzhou calligraphy event film reel" onclick="openLb('1151610689')"><img class="wc-img" loading="lazy" decoding="async" fetchpriority="low" src="630泉州笔会.webp" width="800" height="450" alt="630泉州笔会 thumbnail"><span class="wp"><svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M1 1L11 7L1 13V1Z" fill="white"/></svg></span><span class="wi"><span class="wi-t">Quanzhou Calligraphy Gathering</span><span class="wi-s">Director · Cultural Film, China</span></span></button>
+    <button type="button" class="wc" aria-label="Play Quanzhou tour event film reel" onclick="openLb('1151608525')"><img class="wc-img" loading="lazy" decoding="async" fetchpriority="low" src="6月19日-20日游览泉州.webp" width="800" height="450" alt="6月19日-20日游览泉州 thumbnail"><span class="wp"><svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M1 1L11 7L1 13V1Z" fill="white"/></svg></span><span class="wi"><span class="wi-t">Quanzhou City Film</span><span class="wi-s">Director · Tourism Film, China</span></span></button>
     </div>
     <button class="work-nav next" type="button" aria-label="Next work" data-work-dir="1"><svg viewBox="0 0 24 24" fill="none"><path d="M15 5L8 12L15 19" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
   </div>
@@ -1178,8 +1197,8 @@ body.menu-open .n-toggle span:nth-child(3) { transform:translateY(-10px) rotate(
 <!-- SELECTED CLIENTS -->
 <section id="clients">
   <h2 class="clients-eyebrow rv"><span>Trusted by</span><span class="ce-line" aria-hidden="true"></span></h2>
-  <div class="logos-marquee rv d2" aria-label="Selected clients and brands: Mercedes-Benz, Ferrari, Aston Martin, Genesis, Lotus, HAVAL, Smart, Vodafone, Orange, Etisalat, Maroon 5, Shkoon, SODIC, King Long">
-    <div class="lm-track">
+  <div class="logos-marquee rv d2" role="group" aria-label="Selected clients and brands: Mercedes-Benz, Ferrari, Aston Martin, Genesis, Lotus, HAVAL, Smart, Vodafone, Orange, Etisalat, Maroon 5, Shkoon, SODIC, King Long">
+    <div class="lm-track" aria-hidden="true">
       <span>Mercedes-Benz</span><span>Ferrari</span><span>Aston Martin</span><span>Genesis</span><span>Lotus</span><span>HAVAL</span><span>Smart</span><span>Vodafone</span><span>Orange</span><span>Etisalat</span><span>Maroon&nbsp;5</span><span>Shkoon</span><span>SODIC</span><span>King&nbsp;Long</span>
       <span aria-hidden="true">Mercedes-Benz</span><span aria-hidden="true">Ferrari</span><span aria-hidden="true">Aston Martin</span><span aria-hidden="true">Genesis</span><span aria-hidden="true">Lotus</span><span aria-hidden="true">HAVAL</span><span aria-hidden="true">Smart</span><span aria-hidden="true">Vodafone</span><span aria-hidden="true">Orange</span><span aria-hidden="true">Etisalat</span><span aria-hidden="true">Maroon&nbsp;5</span><span aria-hidden="true">Shkoon</span><span aria-hidden="true">SODIC</span><span aria-hidden="true">King&nbsp;Long</span>
     </div>
@@ -1201,7 +1220,7 @@ body.menu-open .n-toggle span:nth-child(3) { transform:translateY(-10px) rotate(
       </div>
     </div>
     <div class="about-photo rv d2">
-      <img src="about.jpeg" alt="Pola Rasmy, Filmmaker" loading="lazy" decoding="async">
+      <img src="about.webp" width="1024" height="1024" alt="Pola Rasmy, Filmmaker" loading="lazy" decoding="async" fetchpriority="low">
     </div>
     <div class="about-stats rv d3">
       <div class="a-stat"><div class="a-num"><span class="cnt" data-t="7">7</span><mark>+</mark></div><div class="a-lbl">YEARS EXPERIENCE</div></div>
@@ -1217,7 +1236,7 @@ body.menu-open .n-toggle span:nth-child(3) { transform:translateY(-10px) rotate(
   <h2 class="s-lbl rv no-dash">Global Presence</h2>
   <div class="cities-grid rv d2">
     <div class="city">
-      <img src="cairo.jpeg" alt="Cairo, Egypt" loading="lazy" decoding="async">
+      <img src="cairo.webp" width="1000" height="558" alt="Cairo, Egypt" loading="lazy" decoding="async" fetchpriority="low">
       <div class="city-overlay"></div>
       <div class="city-content">
         <div>
@@ -1228,7 +1247,7 @@ body.menu-open .n-toggle span:nth-child(3) { transform:translateY(-10px) rotate(
       </div>
     </div>
     <div class="city">
-      <img src="shangai.jpeg" alt="Shanghai, China" loading="lazy" decoding="async">
+      <img src="shangai.webp" width="1000" height="558" alt="Shanghai, China" loading="lazy" decoding="async" fetchpriority="low">
       <div class="city-overlay"></div>
       <div class="city-content">
         <div>
@@ -1239,7 +1258,7 @@ body.menu-open .n-toggle span:nth-child(3) { transform:translateY(-10px) rotate(
       </div>
     </div>
     <div class="city">
-      <img src="toronto.jpeg" alt="Toronto, Canada" loading="lazy" decoding="async">
+      <img src="toronto.webp" width="1000" height="558" alt="Toronto, Canada" loading="lazy" decoding="async" fetchpriority="low">
       <div class="city-overlay"></div>
       <div class="city-content">
         <div>
@@ -1269,7 +1288,7 @@ body.menu-open .n-toggle span:nth-child(3) { transform:translateY(-10px) rotate(
     </div>
     <div class="dc-panel dc-still rv d1">
       <div class="dc-card">
-        <img src="section1-image.jpg" alt="Production still on set" width="1680" height="937" loading="lazy" decoding="async">
+        <img src="section1-image.webp" alt="Production still on set" width="1500" height="836" loading="lazy" decoding="async" fetchpriority="low">
       </div>
     </div>
     <div id="contact" class="dc-panel dc-connect rv d2">
@@ -1277,10 +1296,13 @@ body.menu-open .n-toggle span:nth-child(3) { transform:translateY(-10px) rotate(
       <div class="dc-availability"><span class="bp"></span>Based between Cairo &amp; China &middot; Available Worldwide</div>
       <h2 class="dc-heading">Have a film<br>that needs to<br><em>cross borders?</em></h2>
       <p class="dc-subcopy">Tell me what you're making — message me on WhatsApp, or book a call below.</p>
-      <form class="dc-form" id="leadForm" novalidate>
-        <input type="text" id="pf_name" placeholder="Your name" autocomplete="name" required>
-        <input type="text" id="pf_type" placeholder="Project type — car film, brand, event…">
-        <textarea id="pf_msg" rows="2" placeholder="A line about it — timeline / location"></textarea>
+      <form class="dc-form" id="leadForm">
+        <label class="dc-field-label" for="pf_name">Your name</label>
+        <input type="text" id="pf_name" placeholder="Name or company" autocomplete="name" required>
+        <label class="dc-field-label" for="pf_type">Project type <span class="optional">· optional</span></label>
+        <input type="text" id="pf_type" placeholder="Car film, brand, event…">
+        <label class="dc-field-label" for="pf_msg">Project details <span class="optional">· optional</span></label>
+        <textarea id="pf_msg" rows="2" placeholder="Timeline, location, or a short brief"></textarea>
         <button type="submit" class="dc-submit">Send via WhatsApp
           <span class="dc-arrow" aria-hidden="true"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 0 0-6.9 12l-1 3.6 3.7-1A8 8 0 1 0 8 0Zm4.6 11.3c-.2.5-1.1 1-1.5 1-.4.1-.9.1-1.4-.1-.3-.1-.8-.3-1.4-.5-2.4-1-4-3.5-4.1-3.6-.1-.2-1-1.3-1-2.4s.6-1.7.8-2c.2-.2.4-.3.6-.3h.4c.1 0 .3 0 .5.4l.7 1.6c0 .1.1.3 0 .4l-.3.5-.3.3c-.1.1-.2.2-.1.4l.6 1c.5.7 1 1 1.3 1.2.3.2.5.1.6 0l.6-.7c.2-.2.3-.2.5-.1l1.5.7c.2.1.4.2.4.3.1.1.1.4 0 .5Z"/></svg></span>
         </button>
@@ -1296,6 +1318,7 @@ body.menu-open .n-toggle span:nth-child(3) { transform:translateY(-10px) rotate(
     </div>
   </div>
 </section>
+</main>
 
 
 <footer>
@@ -1303,7 +1326,7 @@ body.menu-open .n-toggle span:nth-child(3) { transform:translateY(-10px) rotate(
   <div class="ft-r">&copy; <span id="yr">2026</span> RASMY &middot; ALL RIGHTS RESERVED</div>
   <div class="ft-links" aria-label="Social links">
     <a href="https://www.instagram.com/polarasmy/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg></a>
-    <a href="https://www.youtube.com/@polarasmy" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+    <a href="https://www.youtube.com/@polarasmyy" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
     <a href="https://www.behance.net/PolaRasmy" target="_blank" rel="noopener" aria-label="Behance"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.969 16.927a2.561 2.561 0 0 0 1.901.677 2.501 2.501 0 0 0 1.531-.475c.362-.235.636-.584.779-.99h2.585a5.091 5.091 0 0 1-1.9 2.896 5.292 5.292 0 0 1-3.091.88 5.839 5.839 0 0 1-2.284-.433 4.871 4.871 0 0 1-1.723-1.211 5.657 5.657 0 0 1-1.08-1.874 7.057 7.057 0 0 1-.383-2.393c-.005-.8.129-1.595.396-2.349a5.313 5.313 0 0 1 5.088-3.604 4.87 4.87 0 0 1 2.376.563c.661.362 1.231.87 1.668 1.485a6.2 6.2 0 0 1 .943 2.133c.194.821.263 1.666.205 2.508h-7.699c-.063.79.184 1.574.688 2.187ZM6.947 4.084a8.065 8.065 0 0 1 1.928.198 4.29 4.29 0 0 1 1.49.638c.418.303.748.711.958 1.182.241.579.357 1.203.341 1.83a3.506 3.506 0 0 1-.506 1.961 3.726 3.726 0 0 1-1.503 1.287 3.588 3.588 0 0 1 2.027 1.437c.464.747.697 1.615.67 2.494a4.593 4.593 0 0 1-.423 2.032 3.945 3.945 0 0 1-1.163 1.413 5.114 5.114 0 0 1-1.683.807 7.135 7.135 0 0 1-1.928.259H0V4.084h6.947Zm-.235 12.9c.308.004.616-.029.916-.099a2.18 2.18 0 0 0 .766-.332c.228-.158.411-.371.534-.619.142-.317.208-.663.191-1.009a2.08 2.08 0 0 0-.642-1.715 2.618 2.618 0 0 0-1.696-.505h-3.54v4.279h3.471Zm13.635-5.967a2.13 2.13 0 0 0-1.654-.619 2.336 2.336 0 0 0-1.163.259 2.474 2.474 0 0 0-.738.62 2.359 2.359 0 0 0-.396.792c-.074.239-.12.485-.137.734h4.769a3.239 3.239 0 0 0-.679-1.785l-.002-.001Zm-13.813-.648a2.254 2.254 0 0 0 1.423-.433c.399-.355.607-.88.56-1.413a1.916 1.916 0 0 0-.178-.891 1.298 1.298 0 0 0-.495-.533 1.851 1.851 0 0 0-.711-.274 3.966 3.966 0 0 0-.835-.073H3.241v3.631h3.293v-.014ZM21.62 5.122h-5.976v1.527h5.976V5.122Z"/></svg></a>
     <a href="https://www.imdb.com/name/nm17630658/" target="_blank" rel="noopener" aria-label="IMDb"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.3781 0H1.6218C.7411.0583.0587.7437.0018 1.5953l-.001 20.783c.0585.8761.7125 1.543 1.5559 1.6191A.337.337 0 0 0 1.6016 24h20.7971a.4579.4579 0 0 0 .0437-.002c.8727-.0768 1.5568-.8271 1.5568-1.7085V1.7098c0-.8914-.696-1.6416-1.584-1.7078A.3294.3294 0 0 0 22.3781 0zm0 .496a1.2144 1.2144 0 0 1 1.1252 1.2139v20.5797c0 .6377-.4875 1.1602-1.1045 1.2145H1.6016c-.5967-.0543-1.0645-.5297-1.1053-1.1258V1.6284C.5371 1.0185 1.0184.5364 1.6217.496h20.7564zM4.7954 8.2603v7.3636H2.8899V8.2603h1.9055zm6.5367 0v7.3636H9.6707v-4.9704l-.6711 4.9704H7.813l-.6986-4.8618-.0066 4.8618h-1.668V8.2603h2.468c.0748.4476.1492.9694.2307 1.5734l.2712 1.8713.4407-3.4447h2.4817zm2.9772 1.3289c.0742.0404.122.108.1417.2034.0279.0953.0345.3118.0345.6442v2.8548c0 .4881-.0345.7867-.0955.8954-.0609.1152-.2304.1695-.5018.1695V9.5211c.204 0 .3457.0205.4211.0681zm-.0211 6.0347c.4543 0 .8006-.0265 1.0245-.0742.2304-.0477.4204-.1357.5694-.2648.1556-.1218.2642-.298.3251-.5219.0611-.2238.1021-.6648.1021-1.3224v-2.5832c0-.6986-.0271-1.1668-.0742-1.4039-.041-.237-.1431-.4543-.3126-.6437-.1695-.1973-.4198-.3324-.7456-.421-.3191-.0808-.8542-.1285-1.7694-.1285h-1.4244v7.3636h2.3051zm5.14-1.7827c0 .3523-.0199.5762-.0544.6708-.033.0947-.1894.1424-.3046.1424-.1086 0-.19-.0477-.2238-.1351-.041-.0887-.0609-.2986-.0609-.6238v-1.9469c0-.3324.0199-.5423.0543-.6237.0338-.0808.1086-.122.2171-.122.1153 0 .2709.0412.3114.1425.041.0947.0609.2986.0609.6032v1.8926zm-2.4747-5.5809v7.3636h1.7157l.1152-.4675c.1556.1894.3251.3324.5152.4271.1828.0881.4608.1357.678.1357.3047 0 .5629-.0748.7802-.237.2165-.1562.3589-.3462.4198-.5628.0543-.2173.0887-.543.0887-.9841v-2.0675c0-.4409-.0139-.7324-.0344-.8681-.0199-.1357-.0742-.2781-.1695-.4204-.1021-.1425-.2437-.251-.4272-.3325-.1834-.0742-.3999-.1152-.6576-.1152-.2172 0-.4952.0477-.6846.1285-.1835.0887-.353.2238-.5086.4007V8.2603h-1.8309z"/></svg></a>
   </div>
@@ -1313,7 +1336,7 @@ body.menu-open .n-toggle span:nth-child(3) { transform:translateY(-10px) rotate(
 <div id="lb" role="dialog" aria-modal="true" aria-label="Video player">
   <div class="lb-w">
     <button class="lb-x" onclick="closeLb()">ESC — CLOSE ✕</button>
-    <div class="lb-r"><iframe id="lb-iframe" title="Pola Rasmy — video player" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="lb-r"><iframe id="lb-iframe" title="Pola Rasmy — video player" tabindex="0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
   </div>
 </div>
 
@@ -1329,7 +1352,13 @@ document.querySelectorAll('a,button,.wc,.svc,.city,.c-link,.dc-item,.dc-card,.dc
 
 let n=0;const li=setInterval(()=>{n=Math.min(n+Math.random()*14,100);if(n>=100){clearInterval(li);setTimeout(()=>{const ldr=document.getElementById('ldr');if(ldr)ldr.classList.add('out');},200);}},65);
 
-window.addEventListener('scroll',()=>{document.getElementById('pg').style.width=(window.scrollY/(document.body.scrollHeight-window.innerHeight)*100)+'%';});
+function updateScrollUi(){
+  const max=document.body.scrollHeight-window.innerHeight;
+  document.getElementById('pg').style.width=(max>0?window.scrollY/max*100:0)+'%';
+  document.querySelector('nav').classList.toggle('scrolled',window.scrollY>20);
+}
+window.addEventListener('scroll',updateScrollUi,{passive:true});
+updateScrollUi();
 
 const ro=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on');});},{threshold:.1});
 document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
@@ -1381,11 +1410,22 @@ if(navToggle&&navLinks){
 }
 
 let lbOpener=null;
-function openLb(id){lbOpener=document.activeElement;document.getElementById('lb-iframe').src='https://player.vimeo.com/video/'+id+'?badge=0&autopause=0&autoplay=1&player_id=0&app_id=58479';document.getElementById('lb').classList.add('on');document.body.style.overflow='hidden';var x=document.querySelector('.lb-x');if(x)x.focus();}
+function openLb(id){lbOpener=document.activeElement;document.getElementById('lb-iframe').src='https://player.vimeo.com/video/'+id+'?badge=0&autopause=0&autoplay=1&player_id=0&app_id=58479';document.getElementById('lb').classList.add('on');document.body.style.overflow='hidden';var x=document.querySelector('.lb-x');if(x)setTimeout(function(){x.focus();},100);}
 function closeLb(){document.getElementById('lb').classList.remove('on');document.getElementById('lb-iframe').src='';document.body.style.overflow='';if(lbOpener){lbOpener.focus();lbOpener=null;}}
 document.getElementById('lb').addEventListener('click',function(e){if(e.target===this)closeLb();});
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.getElementById('lb').classList.contains('on'))closeLb();});
-document.querySelectorAll('.wc[role=button]').forEach(c=>{c.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();c.click();}});});
+document.addEventListener('keydown',e=>{
+  const dialog=document.getElementById('lb');
+  if(!dialog.classList.contains('on'))return;
+  if(e.key==='Escape'){e.preventDefault();closeLb();return;}
+  if(e.key!=='Tab')return;
+  const focusable=Array.from(dialog.querySelectorAll('button,iframe,a[href],[tabindex]:not([tabindex="-1"])'))
+    .filter(el=>!el.disabled&&el.getClientRects().length);
+  if(!focusable.length)return;
+  const first=focusable[0],last=focusable[focusable.length-1];
+  if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+  else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+  else if(!dialog.contains(document.activeElement)){e.preventDefault();first.focus();}
+});
 /* Smooth in-page nav with fixed-nav offset (robust regardless of scroller) */
 (function(){
   var NAV_OFFSET=80;
