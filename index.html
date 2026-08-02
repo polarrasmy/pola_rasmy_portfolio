@@ -4,18 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RASMY — Global Film Production · Cairo × China</title>
-<meta name="description" content="RASMY is an independent creative production company building cinematic live-action and AI-enhanced films between Egypt, China and worldwide.">
+<meta name="description" content="RASMY directs and produces cinematic commercial, automotive and destination films between Egypt, China and worldwide, with global crews and Creative AI.">
 <link rel="canonical" href="https://rasmy.co/">
 <meta name="theme-color" content="#f1f2f4">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="RASMY">
 <meta property="og:title" content="RASMY — Global Film Production · Cairo × China">
-<meta property="og:description" content="Cinematic commercial, automotive and destination films — built with the right crew for every brief.">
+<meta property="og:description" content="Films that make brands impossible to ignore — led from brief to delivery between Egypt, China and worldwide.">
 <meta property="og:url" content="https://rasmy.co/">
 <meta property="og:image" content="https://rasmy.co/section1-image.webp">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="RASMY — Global Film Production · Cairo × China">
-<meta name="twitter:description" content="Cinematic commercial, automotive and destination films — built with the right crew for every brief.">
+<meta name="twitter:description" content="Films that make brands impossible to ignore — led from brief to delivery between Egypt, China and worldwide.">
 <meta name="twitter:image" content="https://rasmy.co/section1-image.webp">
 <link rel="preload" as="font" href="fonts/inter-latin.woff2" type="font/woff2" crossorigin>
 <link rel="preload" as="image" href="section1-image.webp" type="image/webp">
@@ -150,6 +150,16 @@ h2{font-size:clamp(3rem,6.3vw,6.3rem);font-weight:620;line-height:.92;letter-spa
 .cap-row{min-height:94px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:3rem 1fr auto;align-items:center;gap:1rem;transition:padding .3s var(--ease),background .2s}
 .cap-row:hover{padding:0 1rem;background:#f7f8fa}.cap-no{color:#93959b;font-size:.68rem}.cap-name{font-size:clamp(1.25rem,2.2vw,2rem);font-weight:560;letter-spacing:-.035em}.cap-note{color:var(--muted);font-size:.72rem}
 
+.leadership{padding:0 var(--pad) clamp(6rem,10vw,10rem);background:#fff}
+.leadership-inner{width:min(1450px,100%);margin:auto;border-radius:var(--radius);overflow:hidden;background:#f3f4f6;display:grid;grid-template-columns:minmax(360px,.72fr) 1.28fr}
+.leadership-image{min-height:620px;background:#15161a}.leadership-image img{height:100%;object-fit:cover;object-position:center top}
+.leadership-copy{padding:clamp(2rem,6vw,6rem);display:flex;flex-direction:column;justify-content:center}
+.leadership-copy h2{font-size:clamp(3rem,5.8vw,5.8rem)}.leadership-copy>p{max-width:620px;margin-top:1.5rem;color:var(--muted);font-size:.95rem;line-height:1.7}
+.leadership-signoff{margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--line);display:flex;align-items:end;justify-content:space-between;gap:2rem}
+.leadership-signoff strong{font-size:1rem}.leadership-signoff span{display:block;margin-top:.35rem;color:var(--muted);font-size:.7rem}.leadership-principle{max-width:290px;text-align:right!important;color:var(--ink)!important;font-size:.8rem!important;font-weight:600}
+.leadership-values{margin-top:2.5rem;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.leadership-value{min-height:88px;padding:1rem;border-right:1px solid var(--line);display:flex;align-items:center;font-size:.72rem;line-height:1.45}.leadership-value:first-child{padding-left:0}.leadership-value:last-child{border-right:0}
+
 .credit{padding:0 var(--pad) clamp(6rem,10vw,10rem);background:#fff}
 .credit-inner{width:min(1450px,100%);margin:auto;display:grid;grid-template-columns:1fr 1fr;border-radius:var(--radius);overflow:hidden;background:#eef0f4}
 .credit-image{min-height:480px}.credit-image img{height:100%;object-fit:cover;filter:saturate(.82)}
@@ -166,7 +176,7 @@ h2{font-size:clamp(3rem,6.3vw,6.3rem);font-weight:620;line-height:.92;letter-spa
 
 @media(max-width:980px){
   .hero-grid{grid-template-columns:1fr}.hero-copy{text-align:center}.hero-copy>p{margin-left:auto;margin-right:auto}.actions,.hero-proof{justify-content:center}.hero-visual{width:min(760px,100%);margin:auto}.hero-card{height:min(68svh,650px)}.location-chip{right:16px}
-  .section-heading,.process-head{grid-template-columns:1fr}.project,.project.small{grid-column:span 12}.process-grid{grid-template-columns:repeat(2,1fr)}.process-step:nth-child(2){border-right:0}.process-step:nth-child(-n+2){border-bottom:1px solid var(--line)}.lab-inner{grid-template-columns:1fr}.lab-visual{min-height:62vw}.world-inner{grid-template-columns:1fr}.network-inner{grid-template-columns:1fr}.cap-inner{grid-template-columns:1fr}.credit-inner{grid-template-columns:1fr}.credit-image{min-height:60vw}.contact-inner{grid-template-columns:1fr}
+  .section-heading,.process-head{grid-template-columns:1fr}.project,.project.small{grid-column:span 12}.process-grid{grid-template-columns:repeat(2,1fr)}.process-step:nth-child(2){border-right:0}.process-step:nth-child(-n+2){border-bottom:1px solid var(--line)}.lab-inner{grid-template-columns:1fr}.lab-visual{min-height:62vw}.world-inner{grid-template-columns:1fr}.network-inner{grid-template-columns:1fr}.cap-inner{grid-template-columns:1fr}.leadership-inner{grid-template-columns:1fr}.leadership-image{min-height:75vw}.credit-inner{grid-template-columns:1fr}.credit-image{min-height:60vw}.contact-inner{grid-template-columns:1fr}
 }
 @media(max-width:720px){
   body.menu-open{overflow:hidden}.brand,.menu{position:relative;z-index:2}
@@ -174,7 +184,7 @@ h2{font-size:clamp(3rem,6.3vw,6.3rem);font-weight:620;line-height:.92;letter-spa
   body.menu-open .nav-links{opacity:1;visibility:visible;transform:none}.nav-links a{width:100%;font-size:clamp(2rem,10vw,3rem);font-weight:600;letter-spacing:-.055em}.nav-cta{width:auto!important;margin-top:1.25rem;padding:0 1.2rem!important;font-size:1rem!important;letter-spacing:-.02em!important}.menu{display:block}
   .hero{padding-top:7.5rem}.hero-grid{gap:2.3rem}h1{font-size:clamp(3.4rem,15.5vw,5rem)}.actions{flex-direction:column}.actions .btn{width:100%}.hero-proof{display:grid;grid-template-columns:1fr 1fr;text-align:left}.proof-item{border:0;padding:0}.hero-card{min-height:500px;height:62svh}.hero-card img{object-position:57% top}.location-chip{display:none}.hero-card-copy{flex-direction:column;align-items:flex-start;gap:.4rem}
   .trust-inner{grid-template-columns:1fr}.brand-row{justify-content:flex-start}
-  .section-heading,.process-head{gap:1.5rem}.process-grid{grid-template-columns:1fr}.process-step{min-height:240px;border-right:0;border-bottom:1px solid var(--line)}.process-step:nth-child(3){border-bottom:1px solid var(--line)}.process-step:last-child{border-bottom:0}.lab-visual{min-height:82vw}.lab-frame{align-items:flex-start;flex-direction:column;gap:.4rem}.lab-services{grid-template-columns:1fr}.lab-service:nth-child(n){min-height:70px;padding:1rem 0;border-right:0}.lab-copy .btn{width:100%}.world-grid{grid-template-columns:1fr}.world-card{min-height:280px}.network-row{grid-template-columns:1.7rem 1fr}.network-row span:last-child{grid-column:2;text-align:left;padding-bottom:.85rem}.cap-row{grid-template-columns:2rem 1fr}.cap-note{grid-column:2}.credit-image{min-height:78vw}.contact .btn{width:100%}.footer{align-items:flex-start;flex-direction:column;gap:1rem}.social{flex-wrap:wrap}
+  .section-heading,.process-head{gap:1.5rem}.process-grid{grid-template-columns:1fr}.process-step{min-height:240px;border-right:0;border-bottom:1px solid var(--line)}.process-step:nth-child(3){border-bottom:1px solid var(--line)}.process-step:last-child{border-bottom:0}.lab-visual{min-height:82vw}.lab-frame{align-items:flex-start;flex-direction:column;gap:.4rem}.lab-services{grid-template-columns:1fr}.lab-service:nth-child(n){min-height:70px;padding:1rem 0;border-right:0}.lab-copy .btn{width:100%}.world-grid{grid-template-columns:1fr}.world-card{min-height:280px}.network-row{grid-template-columns:1.7rem 1fr}.network-row span:last-child{grid-column:2;text-align:left;padding-bottom:.85rem}.cap-row{grid-template-columns:2rem 1fr}.cap-note{grid-column:2}.leadership-image{min-height:105vw}.leadership-signoff{align-items:flex-start;flex-direction:column}.leadership-principle{text-align:left!important}.leadership-values{grid-template-columns:1fr}.leadership-value:nth-child(n){min-height:70px;padding:1rem 0;border-right:0;border-bottom:1px solid var(--line)}.leadership-value:last-child{border-bottom:0}.credit-image{min-height:78vw}.contact .btn{width:100%}.footer{align-items:flex-start;flex-direction:column;gap:1rem}.social{flex-wrap:wrap}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}}
 </style>
@@ -194,14 +204,14 @@ h2{font-size:clamp(3rem,6.3vw,6.3rem);font-weight:620;line-height:.92;letter-spa
   <section class="hero">
     <div class="hero-grid">
       <div class="hero-copy">
-        <span class="micro">Film production · Cairo × China</span>
-        <h1>From Cairo to China. Made for everywhere.</h1>
-        <p>Independent creative production between Egypt and China. Commercial, automotive and destination films — built with the right crew for every brief.</p>
-        <div class="actions"><a class="btn primary" href="#work">Explore our work →</a><a class="btn secondary" href="#contact">Start a production</a></div>
+        <span class="micro">Creative production partner · Cairo × China</span>
+        <h1>Films that make brands impossible to ignore.</h1>
+        <p>RASMY directs and produces cinematic commercials with one accountable creative lead, the right crew for every brief and a clear path from idea to final delivery.</p>
+        <div class="actions"><a class="btn primary" href="#work">Watch the work →</a><a class="btn secondary" href="#contact">Send a brief</a></div>
         <div class="hero-proof">
-          <div class="proof-item"><strong>Apple TV+</strong><span>Camera department credit</span></div>
-          <div class="proof-item"><strong>Egypt ↔ China</strong><span>Production on both sides</span></div>
-          <div class="proof-item"><strong>1,000+</strong><span>Independent network</span></div>
+          <div class="proof-item"><strong>Apple TV+</strong><span>International film credit</span></div>
+          <div class="proof-item"><strong>6 films</strong><span>Watch selected work</span></div>
+          <div class="proof-item"><strong>1,000+</strong><span>Specialists in our network</span></div>
         </div>
       </div>
       <div class="hero-visual">
@@ -240,6 +250,8 @@ h2{font-size:clamp(3rem,6.3vw,6.3rem);font-weight:620;line-height:.92;letter-spa
   <section class="network" id="network"><div class="network-inner"><div class="network-copy"><span class="micro">RASMY Network</span><h2>One brief.<br>The right team.</h2><p>We build each production around what the idea actually needs. RASMY draws on real working relationships with more than 1,000 independent creatives and production specialists, then leads the project through one accountable production partner.</p><p class="founder-note">Founded and creatively led by Pola Rasmy — a director and filmmaker working between Egypt and China.</p></div><div class="network-panel"><div class="network-stat"><strong>1,000+</strong><span>Independent creatives and production specialists across the wider RASMY network. Curated per project — never one-size-fits-all.</span></div><div class="network-list"><div class="network-row"><span>01</span><strong>Direction & camera</strong><span>Directors · DOPs · Operators</span></div><div class="network-row"><span>02</span><strong>Production</strong><span>Producers · PMs · Crews</span></div><div class="network-row"><span>03</span><strong>Art & talent</strong><span>Design · Styling · Casting</span></div><div class="network-row"><span>04</span><strong>Post-production</strong><span>Edit · Color · Sound · VFX</span></div></div></div></div></section>
 
   <section class="capabilities" id="capabilities"><div class="cap-inner"><div><span class="micro">Capabilities</span><h2>Production,<br>end to end.</h2></div><div class="cap-list"><div class="cap-row"><span class="cap-no">01</span><span class="cap-name">Creative development</span><span class="cap-note">Concept · Treatment · Visual language</span></div><div class="cap-row"><span class="cap-no">02</span><span class="cap-name">Direction & production</span><span class="cap-note">Commercial · Automotive · Destination</span></div><div class="cap-row"><span class="cap-no">03</span><span class="cap-name">International production services</span><span class="cap-note">Crews · Locations · Permits · Logistics</span></div><div class="cap-row"><span class="cap-no">04</span><span class="cap-name">Creative AI & hybrid production</span><span class="cap-note">Concept frames · Previz · AI-assisted post</span></div><div class="cap-row"><span class="cap-no">05</span><span class="cap-name">Project-specific crew building</span><span class="cap-note">The right specialists around each brief</span></div><div class="cap-row"><span class="cap-no">06</span><span class="cap-name">Post-production</span><span class="cap-note">Edit · Color · Sound · Delivery</span></div></div></div></section>
+
+  <section class="leadership" id="leadership"><div class="leadership-inner"><div class="leadership-image"><img src="about.webp" width="1024" height="1024" loading="lazy" alt="Pola Rasmy, founder and creative lead of RASMY"></div><div class="leadership-copy"><span class="micro">Founder-led production</span><h2>The person you meet stays close to the work.</h2><p>RASMY is founded and creatively led by Pola Rasmy, a director and filmmaker working between Egypt and China. The company stays intentionally founder-led: clear creative decisions, a crew built around the brief and one accountable point of contact from treatment to delivery.</p><div class="leadership-values"><div class="leadership-value">Direct creative leadership</div><div class="leadership-value">Project-built specialist crews</div><div class="leadership-value">One accountable production partner</div></div><div class="leadership-signoff"><div><strong>Pola Rasmy</strong><span>Founder · Director · Filmmaker</span></div><p class="leadership-principle">One idea. One standard. One accountable lead.</p></div></div></div></section>
 
   <section class="credit"><div class="credit-inner"><div class="credit-image"><img src="fountainofyouth.webp" width="1280" height="719" loading="lazy" alt="Fountain of Youth — Apple TV+ film"></div><div class="credit-copy"><span class="label">International feature credit · Apple TV+</span><h3>Fountain<br>of Youth</h3><p>Camera department credit on Guy Ritchie’s 2025 Apple Original Film — a global production spanning locations, crews and cultures.</p><a href="https://tv.apple.com/us/movie/fountain-of-youth/umc.cmc.z5xrwbjg3gergiowhrzg61tq" target="_blank" rel="noopener">View the credit ↗</a></div></div></section>
 
